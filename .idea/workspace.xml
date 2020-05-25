@@ -5,86 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc60f063-7fd9-44b6-97b0-46998ea4e98e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/FontManifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/job-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/job-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/job-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/job-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/job-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/job-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/job-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/job-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/share-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/volunteer-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/volunteer-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/images/volunteer-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/fonts/MaterialIcons-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/image/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/image/job-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/image/job-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/image/job-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/image/job-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/image/job-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/image/job-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/image/job-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/image/job-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/image/volunteer-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/image/volunteer-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/image/volunteer-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/last_build_run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/.last_build_id" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/AssetManifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/FontManifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/assets/images/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/assets/images/job-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/assets/images/job-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/assets/images/job-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/assets/images/job-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/assets/images/job-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/assets/images/job-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/assets/images/job-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/assets/images/job-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/assets/images/volunteer-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/assets/images/volunteer-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/assets/images/volunteer-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/fonts/MaterialIcons-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/image/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/image/job-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/image/job-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/image/job-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/image/job-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/image/job-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/image/job-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/image/job-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/image/job-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/image/volunteer-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/image/volunteer-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/image/volunteer-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/packages/cupertino_icons/assets/CupertinoIcons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/css/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/flutter_service_worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/icons/Icon-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/icons/Icon-512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/js/vendor/jquery-1.9.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/js/vendor/modernizr-2.6.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/main.dart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/main.dart.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/79be271370a952f71f26c563428f862f/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/79be271370a952f71f26c563428f862f/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/79be271370a952f71f26c563428f862f/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/79be271370a952f71f26c563428f862f/flutter_assets.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/79be271370a952f71f26c563428f862f/web_release_bundle.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/79be271370a952f71f26c563428f862f/web_release_bundle.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590446507134</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Remove build">
+      <created>1590447807963</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590447807963</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,7 +121,8 @@
     <MESSAGE value="Reformat code" />
     <MESSAGE value="compile flutter web" />
     <MESSAGE value="First init" />
-    <option name="LAST_COMMIT_MESSAGE" value="First init" />
+    <MESSAGE value="Remove build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove build" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
