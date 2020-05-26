@@ -5,47 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc60f063-7fd9-44b6-97b0-46998ea4e98e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/common/config/app_config.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/common/widget/hex_color.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/000003.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/preferences" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/preferences" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common/theme/base_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/theme/base_theme.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common/theme/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/theme/theme.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common/widget/animated_text.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/view/animated_text.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common/widget/button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/view/button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common/widget/menu_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/view/menu_button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common/widget/page_title.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/widget/page_title.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common/widget/react_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/view/react_button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common/widget/responsive_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/widget/responsive_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/repository/online/response/medium_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/repository/online/response/medium_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/education.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/resume/model/education.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/experience.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/resume/model/experience.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/resume.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/resume/model/resume.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/volunteer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/resume/model/volunteer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/resume/resume_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/resume/resume_data.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dependencies/locator/repository_locator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dependencies/locator/repository_locator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dependencies/module/dio_interceptor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dependencies/module/dio_interceptor.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/landing_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/landing_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/menu/app_bar_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/menu/app_bar_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/menu/navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/menu/navigation.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/about_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/about_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/awards_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/awards_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/blog/blog_contract.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/blog/blog_contract.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/blog/blog_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/blog/blog_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/contact/contact_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/contact/contact_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/education_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/education_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/experience_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/experience_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/expertise_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/expertise_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/header_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/header_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/skill_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/skill_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/volunteer_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/volunteer_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils/datetime_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/datetime_utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils/string_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/string_utils.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/portofolio_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/portofolio_section.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590493234736</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactor app config ~ color and constant ~">
+      <created>1590511813544</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590511813544</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,7 +144,8 @@
     <MESSAGE value="Remove build" />
     <MESSAGE value="Add gitignore" />
     <MESSAGE value="Move resumedata" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move resumedata" />
+    <MESSAGE value="Refactor app config ~ color and constant ~" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor app config ~ color and constant ~" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

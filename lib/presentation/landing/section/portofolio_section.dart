@@ -44,7 +44,7 @@ class _PortfolioSectionState extends State<PortfolioSection> {
         width: double.infinity,
         fit: BoxFit.fill,
         image: AdvancedNetworkImage(
-          "https://ghchart.rshah.org/pahlevikun",
+          "https://ghchart.rshah.org/2274A5/pahlevikun",
           useDiskCache: true,
           cacheRule: CacheRule(maxAge: const Duration(days: 10)),
         ),
