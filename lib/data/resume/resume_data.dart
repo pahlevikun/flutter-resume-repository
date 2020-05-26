@@ -1,9 +1,9 @@
-import 'package:pahlevikun.github.io/presentation/resume/model/education.dart';
-import 'package:pahlevikun.github.io/presentation/resume/model/experience.dart';
-import 'package:pahlevikun.github.io/presentation/resume/model/expertise.dart';
-import 'package:pahlevikun.github.io/presentation/resume/model/resume.dart';
-import 'package:pahlevikun.github.io/presentation/resume/model/skill.dart';
-import 'package:pahlevikun.github.io/presentation/resume/model/volunteer.dart';
+import 'package:pahlevikun.github.io/data/resume/model/education.dart';
+import 'package:pahlevikun.github.io/data/resume/model/experience.dart';
+import 'package:pahlevikun.github.io/data/resume/model/expertise.dart';
+import 'package:pahlevikun.github.io/data/resume/model/resume.dart';
+import 'package:pahlevikun.github.io/data/resume/model/skill.dart';
+import 'package:pahlevikun.github.io/data/resume/model/volunteer.dart';
 import 'package:pahlevikun.github.io/utils/datetime_utils.dart';
 
 class ResumeData {

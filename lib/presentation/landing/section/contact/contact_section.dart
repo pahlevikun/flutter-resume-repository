@@ -6,7 +6,7 @@ import 'package:pahlevikun.github.io/common/widget/page_title.dart';
 import 'package:pahlevikun.github.io/common/widget/responsive_widget.dart';
 import 'package:pahlevikun.github.io/presentation/base_page.dart';
 import 'package:pahlevikun.github.io/presentation/landing/landing_page.dart';
-import 'package:pahlevikun.github.io/presentation/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
 
 class ContactSection extends StatefulWidget {
   ContactSection(GlobalKey key) : super(key: key);

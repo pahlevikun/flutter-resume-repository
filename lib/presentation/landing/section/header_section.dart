@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/presentation/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
 
 import '../../base_page.dart';
 import '../landing_page.dart';

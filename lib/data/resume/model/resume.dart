@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:pahlevikun.github.io/presentation/resume/model/education.dart';
-import 'package:pahlevikun.github.io/presentation/resume/model/volunteer.dart';
+import 'package:pahlevikun.github.io/data/resume/model/education.dart';
+import 'package:pahlevikun.github.io/data/resume/model/volunteer.dart';
 
 import 'experience.dart';
 import 'expertise.dart';

@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pahlevikun.github.io/common/config/screen_util.dart';
 import 'package:pahlevikun.github.io/common/widget/menu_button.dart';
 import 'package:pahlevikun.github.io/presentation/landing/landing_page.dart';
-import 'package:pahlevikun.github.io/presentation/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Navigation extends StatelessWidget {
