@@ -2,6 +2,8 @@ import 'package:pahlevikun.github.io/data/repository/online/response/medium_resp
 
 abstract class BlogContract {
   void setStories(List<Story> items);
+
   void showLoading();
+
   void showError();
 }

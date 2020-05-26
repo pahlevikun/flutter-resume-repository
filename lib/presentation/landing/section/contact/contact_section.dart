@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:pahlevikun.github.io/common/config/app_config.dart';
 import 'package:pahlevikun.github.io/common/config/screen_util.dart';
 import 'package:pahlevikun.github.io/common/widget/page_title.dart';
 import 'package:pahlevikun.github.io/common/widget/responsive_widget.dart';
-import 'package:pahlevikun.github.io/presentation/base_page.dart';
-import 'package:pahlevikun.github.io/presentation/landing/landing_page.dart';
 import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/presentation/base_page.dart';
 
 class ContactSection extends StatefulWidget {
   ContactSection(GlobalKey key) : super(key: key);
@@ -78,7 +78,7 @@ class _ContactSectionState extends State<ContactSection> {
           borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: SUB_COLOR, width: 1.0),
+          borderSide: BorderSide(color: AppConfig.secondaryColor, width: 1.0),
           borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
         ),
         hintText: hint,
@@ -88,7 +88,7 @@ class _ContactSectionState extends State<ContactSection> {
         ),
       ),
       style: TextStyle(fontSize: 14),
-      cursorColor: SUB_COLOR,
+      cursorColor: AppConfig.secondaryColor,
       validator: (value) {
         if (value.trim().isEmpty) {
           return 'The field is required';
@@ -108,7 +108,7 @@ class _ContactSectionState extends State<ContactSection> {
       children: <Widget>[
         Icon(
           icon,
-          color: SUB_COLOR,
+          color: AppConfig.secondaryColor,
           size: 28,
         ),
         SizedBox(width: 12),
@@ -141,7 +141,7 @@ class _ContactSectionState extends State<ContactSection> {
     return MaterialButton(
       padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       onPressed: submit,
-      color: isSubmitting ? Colors.grey : SUB_COLOR,
+      color: isSubmitting ? Colors.grey : AppConfig.secondaryColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(SizeConfig.LARGE_SIZE),
       ),

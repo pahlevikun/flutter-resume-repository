@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pahlevikun.github.io/presentation/landing/landing_page.dart';
+import 'package:pahlevikun.github.io/common/config/app_config.dart';
 
 class PageTitle extends StatelessWidget {
   final String title;
@@ -23,7 +23,7 @@ class PageTitle extends StatelessWidget {
           width: 32,
           height: 4,
           decoration: BoxDecoration(
-            color: SUB_COLOR,
+            color: AppConfig.secondaryColor,
             borderRadius: BorderRadius.circular(16),
           ),
         )

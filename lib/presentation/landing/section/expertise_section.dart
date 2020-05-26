@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pahlevikun.github.io/common/config/screen_util.dart';
 import 'package:pahlevikun.github.io/common/widget/page_title.dart';
-import 'package:pahlevikun.github.io/presentation/base_page.dart';
 import 'package:pahlevikun.github.io/data/resume/model/expertise.dart';
 import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/presentation/base_page.dart';
 
 class ExpertiseSection extends StatefulWidget {
   ExpertiseSection(GlobalKey key) : super(key: key);

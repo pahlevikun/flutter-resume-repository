@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:pahlevikun.github.io/common/config/app_config.dart';
 import 'package:pahlevikun.github.io/common/config/screen_util.dart';
 import 'package:pahlevikun.github.io/presentation//landing/section/header_section.dart';
 import 'package:pahlevikun.github.io/presentation/landing/menu/app_bar_mobile.dart';
@@ -16,11 +17,6 @@ import 'package:pahlevikun.github.io/presentation/landing/section/expertise_sect
 import 'package:pahlevikun.github.io/presentation/landing/section/portofolio_section.dart';
 import 'package:pahlevikun.github.io/presentation/landing/section/skill_section.dart';
 import 'package:pahlevikun.github.io/presentation/landing/section/volunteer_section.dart';
-
-const MAIN_COLOR = Color(0xff5A72EA);
-const SUB_COLOR = Color(0xffFF5A59);
-
-const MIN_TABLET_SIZE = 1080;
 
 class LandingPage extends StatefulWidget {
   @override
@@ -48,7 +44,7 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (_, constrain) {
-        return constrain.maxWidth >= MIN_TABLET_SIZE
+        return constrain.maxWidth >= AppConfig.MIN_TABLET_SIZE
             ? _buildTabletBody()
             : _buildPhoneBody();
       },

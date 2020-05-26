@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pahlevikun.github.io/common/config/app_config.dart';
 import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/common/widget/menu_button.dart';
-import 'package:pahlevikun.github.io/presentation/landing/landing_page.dart';
+import 'package:pahlevikun.github.io/common/view/menu_button.dart';
 import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -55,7 +55,7 @@ class Navigation extends StatelessWidget {
           launch(url);
         },
         elevation: 2,
-        backgroundColor: SUB_COLOR,
+        backgroundColor: AppConfig.secondaryColor,
         child: Icon(
           iconData,
           color: Colors.white,
@@ -67,7 +67,7 @@ class Navigation extends StatelessWidget {
 
   Widget _buildNavigation() {
     return Card(
-      color: MAIN_COLOR,
+      color: AppConfig.primaryColor,
       elevation: SizeConfig.SMALL_LARGE_SIZE,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(SizeConfig.SMALL_LARGE_SIZE)),

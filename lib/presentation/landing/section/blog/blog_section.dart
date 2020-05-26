@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pahlevikun.github.io/common/config/screen_util.dart';
+import 'package:pahlevikun.github.io/common/view/react_button.dart';
 import 'package:pahlevikun.github.io/common/widget/page_title.dart';
-import 'package:pahlevikun.github.io/common/widget/react_button.dart';
 import 'package:pahlevikun.github.io/data/repository/online/response/medium_response.dart';
 import 'package:pahlevikun.github.io/presentation/base_page.dart';
 import 'package:pahlevikun.github.io/presentation/landing/section/blog/blog_contract.dart';

@@ -4,8 +4,8 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:pahlevikun.github.io/common/theme/base_theme.dart';
 import 'package:pahlevikun.github.io/common/theme/theme.dart';
-import 'package:pahlevikun.github.io/presentation/landing/landing_page.dart';
 import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/presentation/landing/landing_page.dart';
 
 import 'build_config.dart';
 import 'common/widget/restart_widget.dart';

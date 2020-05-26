@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pahlevikun.github.io/common/config/app_config.dart';
 import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/presentation/landing/landing_page.dart';
 
 class AnimatedText extends StatefulWidget {
   final Function onTap;
@@ -36,7 +36,7 @@ class _AnimatedTextState extends State<AnimatedText>
     );
     _colorTween = ColorTween(
       begin: Colors.black87,
-      end: SUB_COLOR,
+      end: AppConfig.secondaryColor,
     ).animate(_controller);
   }
 

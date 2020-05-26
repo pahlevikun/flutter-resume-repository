@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:pahlevikun.github.io/common/config/app_config.dart';
 import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/presentation/base_page.dart';
-import 'package:pahlevikun.github.io/presentation/landing/landing_page.dart';
 import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/presentation/base_page.dart';
 
 class AppBarMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BasePage(
-      color: MAIN_COLOR,
+      color: AppConfig.primaryColor,
       child: Padding(
         padding: EdgeInsets.all(SizeConfig.SMALL_SIZE),
         child: Row(

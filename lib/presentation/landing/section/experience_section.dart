@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pahlevikun.github.io/common/config/app_config.dart';
 import 'package:pahlevikun.github.io/common/config/screen_util.dart';
 import 'package:pahlevikun.github.io/common/widget/page_title.dart';
 import 'package:pahlevikun.github.io/common/widget/responsive_widget.dart';
-import 'package:pahlevikun.github.io/presentation/base_page.dart';
-import 'package:pahlevikun.github.io/presentation/landing/landing_page.dart';
 import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/presentation/base_page.dart';
 import 'package:timeline_list/timeline.dart';
 import 'package:timeline_list/timeline_model.dart';
 
@@ -135,7 +135,7 @@ class _ExperienceSectionState extends State<ExperienceSection> {
               Padding(
                 padding: const EdgeInsets.only(top: SizeConfig.LARGE_SIZE),
                 child: Divider(
-                  color: SUB_COLOR,
+                  color: AppConfig.secondaryColor,
                 ),
               )
             ],
@@ -146,7 +146,7 @@ class _ExperienceSectionState extends State<ExperienceSection> {
             : TimelineItemPosition.right,
         isFirst: position == 0,
         isLast: position == _data.length,
-        iconBackground: SUB_COLOR,
+        iconBackground: AppConfig.secondaryColor,
         icon: Icon(
           FontAwesomeIcons.briefcase,
           color: Colors.white,

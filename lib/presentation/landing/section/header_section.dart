@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pahlevikun.github.io/common/config/app_config.dart';
 import 'package:pahlevikun.github.io/common/config/screen_util.dart';
 import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
 
 import '../../base_page.dart';
-import '../landing_page.dart';
 
 class HeaderSection extends StatelessWidget {
   final Function hireMe;
@@ -20,7 +20,7 @@ class HeaderSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (_, constrain) {
         return BasePage(
-          color: MAIN_COLOR,
+          color: AppConfig.primaryColor,
           child: Padding(
             padding: EdgeInsets.symmetric(
                 horizontal: constrain.maxWidth / SizeConfig.SMALL_SIZE),
@@ -65,7 +65,7 @@ class HeaderSection extends StatelessWidget {
                           horizontal: SizeConfig.LARGE_SMALL_SIZE,
                           vertical: SizeConfig.SMALL_SIZE),
                       onPressed: hireMe,
-                      color: SUB_COLOR,
+                      color: AppConfig.secondaryColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32),
                       ),
