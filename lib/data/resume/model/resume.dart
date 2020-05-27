@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:pahlevikun.github.io/data/resume/model/education.dart';
+import 'package:pahlevikun.github.io/data/resume/model/portofolio.dart';
 import 'package:pahlevikun.github.io/data/resume/model/volunteer.dart';
 
 import 'experience.dart';
@@ -35,6 +36,8 @@ class ResumeModel {
   final List<Volunteer> volunteer;
   final List<Education> education;
 
+  final List<Porto> portos;
+
   ResumeModel(
       {@required this.webTitle,
       @required this.introduce,
@@ -57,5 +60,6 @@ class ResumeModel {
       @required this.introSkill,
       @required this.experience,
       @required this.volunteer,
-      @required this.education});
+      @required this.education,
+      @required this.portos});
 }

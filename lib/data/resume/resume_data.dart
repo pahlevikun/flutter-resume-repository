@@ -1,6 +1,7 @@
 import 'package:pahlevikun.github.io/data/resume/model/education.dart';
 import 'package:pahlevikun.github.io/data/resume/model/experience.dart';
 import 'package:pahlevikun.github.io/data/resume/model/expertise.dart';
+import 'package:pahlevikun.github.io/data/resume/model/portofolio.dart';
 import 'package:pahlevikun.github.io/data/resume/model/resume.dart';
 import 'package:pahlevikun.github.io/data/resume/model/skill.dart';
 import 'package:pahlevikun.github.io/data/resume/model/volunteer.dart';
@@ -38,7 +39,8 @@ class ResumeData {
       introSkill: _skillsIntro,
       experience: _buildExperience(),
       volunteer: _buildVolunteer(),
-      education: _buildEducation());
+      education: _buildEducation(),
+      portos: _buildPorto());
 
   static List<Education> _buildEducation() {
     return [
@@ -371,6 +373,366 @@ class ResumeData {
               "quality of front-end development and supported with best back-end development "
               "from powerfull backend framework. Deployed application and identify bugs, "
               "user experience issues, and functionality problems for maintaining the application.")
+    ];
+  }
+
+  static List<Porto> _buildPorto() {
+    return [
+      Porto(
+          title: "Berat Idealmu",
+          description: "My first app for check Body Mass Index",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.JAVA],
+          year: "2014"),
+      Porto(
+          title: "Dompetku",
+          description: "Money saving app for tracking income and outcome.",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.JAVA],
+          year: "2015"),
+      Porto(
+          title: "Ilmuwan Islam Hologram",
+          description:
+              "Ilmuwan Islam Hologram is an Augmented Reality Application with Holo Technology based on Android device",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.JAVA],
+          year: "2016"),
+      Porto(
+          title: "Baby Healthcare",
+          description: "Android application for detect Baby disease",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.JAVA],
+          year: "2016"),
+      Porto(
+          title: "Pocket Yasiin",
+          description: "Pocket Yasiin is simple yasiin apps",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.JAVA],
+          year: "2016"),
+      Porto(
+          title: "Tahaqu",
+          industry: "Social Media",
+          description:
+              "Tahaqu is an Android based Islamic application to help users who struggle to save for Sacrifice or Hajj or Umrah",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.JAVA],
+          year: "2016",
+          award: "1st Place Kurma, Gunadarma University"),
+      Porto(
+          title: "Parkir Yuk!",
+          industry: "Social Media",
+          description:
+              "Parking Yuk! is an Android Based application used to find location of "
+              "parking around the station, bus stops and other public places. "
+              "Parkir Yuk! is created for encourage Depok's citizen to increase "
+              "use of public transport and park their vehicles at the parking "
+              "locations. This application can be used to remember the location "
+              "of a vehicle parked in a wide parking lot. This application can "
+              "also check the motor vehicle tax (PKB) which is connected directly "
+              "to the website SAMSAT Polda Metro Jaya",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.JAVA],
+          year: "2016",
+          award: "1st place Depok ICT Award 2016"),
+      Porto(
+          title: "Baking App",
+          description:
+              "Udacity's project for Associate Android Developer Fast Track",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.JAVA],
+          year: "2017"),
+      Porto(
+          title: "Ojekita",
+          industry: "Ride Hailing",
+          description:
+              "Ojekita is a motorcycle taxi in Cirebon city with 3 main service, "
+              "'Kita Jemput' with motorcycle taxi, 'Mobil Kita' with normal car "
+              "taxi, and 'Kita Antar' with delivery food service",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OFFICE,
+          tech: [PortoTech.KOTLIN],
+          year: "2017"),
+      Porto(
+          title: "AA Londri",
+          industry: "Service",
+          description:
+              "AA Londri is shuttle laundry service based on Android device",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OFFICE,
+          tech: [PortoTech.JAVA],
+          year: "2017"),
+      Porto(
+          title: "KMI Katering RSPP",
+          industry: "Service",
+          description:
+              "KMI Katering is native Android application for ordering food in RSPP (Rumah Sakit Pusat Pertamina)",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OFFICE,
+          tech: [PortoTech.JAVA],
+          year: "2017"),
+      Porto(
+          title: "Bogor Tourism",
+          description:
+              "Bogor Tourism is Location Based Service application that use for browse Historical place, Culinary Place, or anything else in Bogor",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.KOTLIN],
+          year: "2017"),
+      Porto(
+          title: "E-Chat App",
+          description:
+              "E-Chat is Android apps used firebase technology and implementing end-to-end encryption",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.KOTLIN],
+          year: "2017"),
+      Porto(
+          title: "Wifi TeMon (Tester & Monitor)",
+          description:
+              "Wifi Tester & Monitor (also known as Wifi TeMon) is PT Telekomunikasi "
+              "Indonesia's product used for automatic test in 'Flashzone-Seamless' access point",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OFFICE,
+          tech: [PortoTech.JAVA, PortoTech.KOTLIN],
+          year: "2017"),
+      Porto(
+          title: "Wifi.Id GO",
+          industry: "Telecommunication",
+          description:
+              "Wifi.id GO is PT Telekomunikasi Indonesia's product for use wifi.id hotspot."
+              " The development continued by me from previous developer",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OFFICE,
+          tech: [PortoTech.JAVA, PortoTech.KOTLIN],
+          year: "2017"),
+      Porto(
+          title: "New Permata",
+          industry: "Telecommunication",
+          description:
+              "New Permata is PT Telekomunikasi Indonesia's product used for making conference call with normal phone line",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OFFICE,
+          tech: [PortoTech.JAVA],
+          year: "2017"),
+      Porto(
+          title: "SeKampus",
+          industry: "Social Media",
+          description:
+              "Sekampus is mobile application used for find your needs near your campus build for Telkom Digital AMOEBA Startup",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OFFICE,
+          tech: [PortoTech.JAVA],
+          year: "2017"),
+      Porto(
+          title: "E-Dokterku",
+          industry: "Service",
+          description: "On-demand medical app",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.KOTLIN],
+          year: "2018"),
+      Porto(
+          title: "ED-Dokter",
+          industry: "Doctor version of E-Dokterku Android Application",
+          description: "Doctor version of E-Dokterku",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.KOTLIN],
+          year: "2018"),
+      Porto(
+          title: "ED-Dokter",
+          industry: "Doctor version of E-Dokterku Android Application",
+          description: "Doctor version of E-Dokterku",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.KOTLIN],
+          year: "2018"),
+      Porto(
+          title: "Pasar Benih 2018",
+          industry: "Marketplace",
+          description: "Soybean seeds Market place",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OFFICE,
+          tech: [PortoTech.KOTLIN],
+          year: "2018"),
+      Porto(
+          title: "BKids Parent",
+          industry: "Banking",
+          description:
+              "Parent version of BKids BNI46 used for give task to kids",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.KOTLIN],
+          year: "2018"),
+      Porto(
+          title: "BKids",
+          industry: "Banking",
+          description: "Android App for BNI46 used for give task to kids",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.KOTLIN],
+          year: "2018"),
+      Porto(
+          title: "VOELA",
+          industry: "Social Media",
+          description: "Food and Culinary encyclopedia in Cirebon City",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OFFICE,
+          tech: [PortoTech.KOTLIN, PortoTech.JAVA],
+          year: "2018"),
+      Porto(
+          title: "VOELA Merchant",
+          industry: "Social Media",
+          description: "Merchant app for VOELA in Cirebon City",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OFFICE,
+          tech: [PortoTech.KOTLIN],
+          year: "2018"),
+      Porto(
+          title: "613 Twibbon",
+          industry: "Image Manipulation",
+          description: "Twibbon app for Highschool reunion",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OFFICE,
+          tech: [PortoTech.KOTLIN],
+          year: "2018"),
+      Porto(
+          title: "IDUang",
+          description: "A simple Indonesia currency converter Android libs",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OPEN_SOURCE,
+          tech: [PortoTech.JAVA],
+          year: "2018"),
+      Porto(
+          title: "Wifiku",
+          description: "A simple Android network-info libs",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OPEN_SOURCE,
+          tech: [PortoTech.JAVA],
+          year: "2018"),
+      Porto(
+          title: "Droidcrypt",
+          description:
+              "A simple Android Library. Very easy for use this Android "
+              "library for performing encryption to String with AES encryption, "
+              "it can used for save to SharedPreferences too",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OPEN_SOURCE,
+          tech: [PortoTech.KOTLIN],
+          year: "2018"),
+      Porto(
+          title: "Jotter",
+          description:
+              "Jotter, a simple library for log all of your Activity and Fragment event",
+          type: PortoType.ANDROID,
+          work: PortoWorks.OPEN_SOURCE,
+          tech: [PortoTech.KOTLIN],
+          year: "2020"),
+      Porto(
+          title: "Expose Concrete",
+          description:
+              "Expose Concrete is bussines website developed with CodeIgniter and Bootstrap framework",
+          type: PortoType.WEB_FRONT_END,
+          work: PortoWorks.PERSONAL,
+          tech: [
+            PortoTech.BOOTSTRAP,
+            PortoTech.CSS,
+            PortoTech.JAVASCRIPT,
+            PortoTech.HTML
+          ],
+          link: "https://www.exposeconcrete.com/",
+          year: "2017"),
+      Porto(
+          title: "Picman Dashboard",
+          description: "Dashboard web app for Picman app",
+          type: PortoType.WEB_BACK_END,
+          work: PortoWorks.PERSONAL,
+          tech: [
+            PortoTech.BOOTSTRAP,
+            PortoTech.CSS,
+            PortoTech.JAVASCRIPT,
+            PortoTech.LARAVEL,
+            PortoTech.HTML
+          ],
+          year: "2020"),
+      Porto(
+          title: "Picman",
+          description: "Touring app for Car Club",
+          type: PortoType.FLUTTER,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.DART, PortoTech.KOTLIN, PortoTech.SWIFT],
+          year: "2020"),
+      Porto(
+          title: "Watong Dashboard",
+          description: "Dashboard web app for Watong app",
+          type: PortoType.WEB_BACK_END,
+          work: PortoWorks.PERSONAL,
+          tech: [
+            PortoTech.BOOTSTRAP,
+            PortoTech.CSS,
+            PortoTech.JAVASCRIPT,
+            PortoTech.LARAVEL,
+            PortoTech.HTML
+          ],
+          year: "2019"),
+      Porto(
+          title: "Watong",
+          description: "On-demand coffee shop app",
+          type: PortoType.FLUTTER,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.DART, PortoTech.KOTLIN, PortoTech.SWIFT],
+          year: "2019"),
+      Porto(
+          title: "PND MyFun",
+          description: "News reader app",
+          type: PortoType.FLUTTER,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.DART, PortoTech.KOTLIN, PortoTech.SWIFT],
+          year: "2020"),
+      Porto(
+          title: "PND MyFun Dashboard",
+          description: "Dashboard web app for PND MyFun app",
+          type: PortoType.WEB_BACK_END,
+          work: PortoWorks.PERSONAL,
+          tech: [
+            PortoTech.BOOTSTRAP,
+            PortoTech.CSS,
+            PortoTech.JAVASCRIPT,
+            PortoTech.LARAVEL,
+            PortoTech.HTML
+          ],
+          year: "2020"),
+      Porto(
+          title: "Brizy",
+          description: "Simple quiz app",
+          type: PortoType.ANDROID,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.KOTLIN],
+          year: "2020"),
+      Porto(
+          title: "Prayer Times",
+          description:
+              "Ramadhan 1439H Side-Project, build in native iOS with Swift",
+          type: PortoType.IOS,
+          work: PortoWorks.PERSONAL,
+          tech: [PortoTech.SWIFT],
+          year: "2018"),
+      Porto(
+          title: "Infinite Tab Button",
+          description:
+              "Flutter package containing widget for making MaterialTab look alike infinite button",
+          type: PortoType.FLUTTER,
+          work: PortoWorks.OPEN_SOURCE,
+          tech: [PortoTech.DART],
+          year: "2020"),
     ];
   }
 }

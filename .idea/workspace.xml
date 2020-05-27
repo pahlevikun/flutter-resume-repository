@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc60f063-7fd9-44b6-97b0-46998ea4e98e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/000003.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/preferences" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/preferences" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/resume/model/protofolio.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/farhanyudapahlevi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/farhanyudapahlevi.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/portofolio_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/portofolio_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/resume/resume_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/resume/resume_data.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590512498983</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add ontap action">
+      <created>1590587622693</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590587622693</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,7 +162,8 @@
     <MESSAGE value="Move resumedata" />
     <MESSAGE value="Refactor app config ~ color and constant ~" />
     <MESSAGE value="Update github API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update github API" />
+    <MESSAGE value="Add ontap action" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ontap action" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
