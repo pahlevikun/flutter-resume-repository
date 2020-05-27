@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc60f063-7fd9-44b6-97b0-46998ea4e98e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/000003.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/preferences" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/preferences" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/portofolio_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/portofolio_section.dart" afterDir="false" />
     </list>
@@ -121,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590511813544</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update github API">
+      <created>1590512498982</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1590512498983</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,7 +155,8 @@
     <MESSAGE value="Add gitignore" />
     <MESSAGE value="Move resumedata" />
     <MESSAGE value="Refactor app config ~ color and constant ~" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor app config ~ color and constant ~" />
+    <MESSAGE value="Update github API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update github API" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
