@@ -103,7 +103,10 @@ class _LandingPageState extends State<LandingPage> {
           _addPadding(),
           BlogSection(keys[9]),
           _addPadding(),
-          ContactSection(keys[10]),
+          Visibility(
+            visible: false,
+            child: ContactSection(keys[10]),
+          ),
         ],
       ),
     );

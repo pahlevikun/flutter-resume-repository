@@ -80,6 +80,12 @@
       "languageVersion": "2.3"
     },
     {
+      "name": "flutter_staggered_grid_view",
+      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/flutter_staggered_grid_view-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "1.19"
+    },
+    {
       "name": "flutter_svg",
       "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.17.4",
       "packageUri": "lib/",
@@ -308,7 +314,7 @@
       "languageVersion": "2.8"
     }
   ],
-  "generated": "2020-05-28T13:22:12.735584Z",
+  "generated": "2020-05-28T14:27:33.296150Z",
   "generator": "pub",
-  "generatorVersion": "2.9.0-10.0.dev.flutter-7706afbcf5"
+  "generatorVersion": "2.9.0-11.0.dev.flutter-e007545c42"
 }

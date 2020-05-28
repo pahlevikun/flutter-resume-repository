@@ -13,13 +13,19 @@ class PahleviThemePicker {
       focusColor: Colors.amber,
       fontFamily: GoogleFonts.openSans().fontFamily,
       textTheme: TextTheme(
-        headline: TextStyle(fontWeight: FontWeight.bold, color: Colors.black54),
-        title: TextStyle(fontWeight: FontWeight.normal, color: Colors.black54),
-        subtitle:
-            TextStyle(fontWeight: FontWeight.normal, color: Colors.black54),
-        body1: TextStyle(fontWeight: FontWeight.normal, color: Colors.black54),
-        button: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-      ));
+          headline1: TextStyle(color: Colors.black87),
+          headline2: TextStyle(color: Colors.black87),
+          headline3: TextStyle(color: Colors.black87),
+          headline4: TextStyle(color: Colors.black87),
+          headline5: TextStyle(color: Colors.black87),
+          headline6: TextStyle(color: Colors.black87),
+          subtitle1:
+              TextStyle(fontWeight: FontWeight.normal, color: Colors.black54),
+          subtitle2:
+              TextStyle(fontWeight: FontWeight.normal, color: Colors.black54),
+          bodyText1: TextStyle(color: Colors.black54),
+          bodyText2: TextStyle(color: Colors.black54),
+          button: TextStyle(color: Colors.white)));
 
   static ThemeData getTheme() {
     return defaultTheme;

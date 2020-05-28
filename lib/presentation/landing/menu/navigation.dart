@@ -144,9 +144,13 @@ class Navigation extends StatelessWidget {
               _buildNavigationOption("Blog", Icons.style, onTap: () {
                 this.onTap(9);
               }),
-              _buildNavigationOption("Contact", Icons.contacts, onTap: () {
-                this.onTap(10);
-              }),
+              Visibility(
+                visible: false,
+                child: _buildNavigationOption("Contact", Icons.contacts,
+                    onTap: () {
+                  this.onTap(10);
+                }),
+              ),
               SizedBox(height: SizeConfig.LARGE_MEDIUM_SIZE),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
