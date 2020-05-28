@@ -35,7 +35,7 @@ class AboutSection extends StatelessWidget {
                       height: _avatarSize,
                       child: CircleAvatar(
                         backgroundImage:
-                            NetworkImage(ResumeData.getData().avatar),
+                            AssetImage(ResumeData.getData().avatar),
                         backgroundColor: Colors.white,
                       ),
                     ),

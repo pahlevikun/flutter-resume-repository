@@ -17,7 +17,7 @@ class AwardsSection extends StatefulWidget {
 }
 
 class _AwardsSectionState extends State<AwardsSection> {
-  final _data = ResumeData.getData().experience;
+  final _data = ResumeData.getData().awards;
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class _AwardsSectionState extends State<AwardsSection> {
               Padding(
                 padding: EdgeInsets.only(top: SizeConfig.SMALL_SIZE),
                 child: Text(
-                  data.duration,
+                  data.year,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: SizeConfig.BODY_1_FONT_SIZE,
@@ -71,24 +71,24 @@ class _AwardsSectionState extends State<AwardsSection> {
                 ),
               ),
               Text(
-                data.company,
+                data.institution,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: SizeConfig.BODY_1_FONT_SIZE,
                 ),
               ),
-              const SizedBox(
-                height: SizeConfig.LARGE_SIZE,
+              Visibility(
+                visible: data.description.isNotEmpty,
+                child: const SizedBox(
+                  height: SizeConfig.LARGE_SIZE,
+                ),
               ),
               Text(
                 data.description,
                 textAlign: TextAlign.justify,
               ),
-              const SizedBox(
-                height: SizeConfig.SMALL_SIZE,
-              ),
               Padding(
-                padding: const EdgeInsets.only(top: SizeConfig.LARGE_SIZE),
+                padding: const EdgeInsets.only(top: SizeConfig.SMALL_SIZE),
                 child: Divider(
                   color: AppConfig.secondaryColor,
                 ),

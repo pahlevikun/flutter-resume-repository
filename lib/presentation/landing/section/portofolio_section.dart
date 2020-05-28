@@ -166,7 +166,7 @@ class _PortfolioSectionState extends State<PortfolioSection> {
       case PortoType.WEB_FRONT_END:
         return "Web Front-End";
       case PortoType.WEB_BACK_END:
-        return "WebApp Back-End";
+        return "Web Back-End";
     }
   }
 

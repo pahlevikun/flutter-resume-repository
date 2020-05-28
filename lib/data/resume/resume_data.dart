@@ -1,3 +1,4 @@
+import 'package:pahlevikun.github.io/data/resume/model/award.dart';
 import 'package:pahlevikun.github.io/data/resume/model/education.dart';
 import 'package:pahlevikun.github.io/data/resume/model/experience.dart';
 import 'package:pahlevikun.github.io/data/resume/model/expertise.dart';
@@ -20,7 +21,7 @@ class ResumeData {
       email: "pahlevi.kun@gmail.com",
       location: "Jakarta, Indonesia",
       birthDate: "1995-08-09",
-      avatar: "assets/images/avatar.png",
+      avatar: "images/avatar.png",
       facebook: "https://facebook.com/pahlevikun",
       instagram: "https://instagram.com/pahlevikun",
       github: "https://github.com/pahlevikun",
@@ -40,7 +41,8 @@ class ResumeData {
       experience: _buildExperience(),
       volunteer: _buildVolunteer(),
       education: _buildEducation(),
-      portos: _buildPorto());
+      portos: _buildPorto(),
+      awards: _buildAwards());
 
   static List<Education> _buildEducation() {
     return [
@@ -89,41 +91,118 @@ class ResumeData {
   static List<Volunteer> _buildVolunteer() {
     return [
       Volunteer(
-        imagePath: "assets/images/volunteer-1.png",
+        imagePath: "images/volunteer-1.png",
         title: "Facilitator",
         name: "IAK Batch 1-2",
         duration: "Mar 2016 - Dec 2016",
       ),
       Volunteer(
-        imagePath: "assets/images/volunteer-2.png",
+        imagePath: "images/volunteer-2.png",
         title: "Ambassador",
         name: "Gitscrum",
         duration: "Mar 2018 - Aug 2018",
       ),
       Volunteer(
-        imagePath: "assets/images/volunteer-3.png",
+        imagePath: "images/volunteer-3.png",
         title: "Contributor",
         name: "Greenpeace",
         duration: "Jun 2017 - Jan 2018",
       ),
       Volunteer(
-        imagePath: "assets/images/volunteer-3.png",
+        imagePath: "images/no-image.png",
         title: "Team Leader",
         name: "Al-Fatih 3",
         duration: "Jul 2016 - Mar 2018",
       ),
       Volunteer(
-        imagePath: "assets/images/volunteer-3.png",
+        imagePath: "images/no-image.png",
         title: "Startup Contributor",
         name: "Wensoft",
         duration: "Jun 2016 - Mar 2018",
       ),
       Volunteer(
-        imagePath: "assets/images/volunteer-3.png",
+        imagePath: "images/no-image.png",
         title: "Community",
         name: "CT Project",
         duration: "Jan 2014 - Aug 2018",
       ),
+    ];
+  }
+
+  static List<Award> _buildAwards() {
+    return [
+      Award(
+          title: "1st Place Depok ICT Award 2016",
+          year: "Aug 2016",
+          institution: "Depok Communication And Informatics Department",
+          description:
+              "Depok ICT Award Or Known As DEPICTA Is Depok Yearly Event,"
+              " in 2016 The Topic Is About Smart City. "
+              "Our Team, Al Fatih 3 Was Elected In 1st Place With Our Application 'Parkir Yuk!'.",
+          type: "Honor"),
+      Award(
+          title: "1st Place KURMA 2016",
+          year: "Jun 2016",
+          institution: "Fajrul Islam Gunadarma",
+          description:
+              "Karunia Ukhuwah Islamiyah Or Known As KURMA Is UKM Fajrul "
+              "Islam Gunadarma Yearly Event At Ramadhan. Out Team, Al Fatih 3 Was "
+              "Elected In 1st Place With Our Application 'Tahaqu'.",
+          type: "Honor"),
+      Award(
+          title: "HTML Fundamentals Course",
+          year: "Mar 2018 – Present  •  License 1014-70388280",
+          institution: "SoloLearn",
+          description: "",
+          type: "Certificate"),
+      Award(
+          title: "Java Tutorial Course",
+          year: "Mar 2018 – Present  •  License 1068-7038280",
+          institution: "SoloLearn",
+          description: "",
+          type: "Certificate"),
+      Award(
+          title: "JavaScript Tutorial Course",
+          year: "Mar 2018 – Present  •  License 1024-70388280",
+          institution: "SoloLearn",
+          description: "",
+          type: "Certificate"),
+      Award(
+          title: "Swift Fundamentals Course",
+          year: "Mar 2018 – Present  •  License 1075-7038280",
+          institution: "SoloLearn",
+          description: "",
+          type: "Certificate"),
+      Award(
+          title: "Microsoft MTA 98-361 : Software Development Fundamentals",
+          year: "Jan 2018 – Present  •  License G602-0607",
+          institution: "Microsoft",
+          description: "",
+          type: "Certificate"),
+      Award(
+          title: "The Total Kotlin Course : Learn Kotlin Today",
+          year: "Nov 2017 – Present  •  License UC-AFC4ILA4",
+          institution: "Udemy",
+          description: "",
+          type: "Certificate"),
+      Award(
+          title: "Associate Android Developer",
+          year: "Sep 2017 – Present  •  License 10942417",
+          institution: "Google Developers",
+          description: "",
+          type: "Certificate"),
+      Award(
+          title: "Facilitator Indonesia Android Kejar 2.0",
+          year: "Jan 2017 – Present",
+          institution: "Google Developers Group",
+          description: "",
+          type: "Certificate"),
+      Award(
+          title: "Indonesia Android Academy",
+          year: "Jan 2015 – Present",
+          institution: "Google Developers Group",
+          description: "",
+          type: "Certificate"),
     ];
   }
 
