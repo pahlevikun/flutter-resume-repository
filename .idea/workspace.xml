@@ -5,13 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc60f063-7fd9-44b6-97b0-46998ea4e98e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/portofolio.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/resume/model/portofolio.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/resume/resume_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/resume/resume_data.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -148,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590591214313</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add more porto">
+      <created>1590672520360</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590672520360</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,7 +175,8 @@
     <MESSAGE value="Update github API" />
     <MESSAGE value="Add ontap action" />
     <MESSAGE value="Add portofolio data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add portofolio data" />
+    <MESSAGE value="Add more porto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more porto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
