@@ -4,9 +4,8 @@ class Porto {
   String title;
   String description;
   PortoType type;
-  List<PortoTech> tech;
+  List<String> tech;
   PortoWorks work;
-  String year;
   String link;
   String award;
   String industry;
@@ -16,28 +15,27 @@ class Porto {
       @required this.description,
       @required this.type,
       @required this.tech,
-      @required this.year,
       @required this.work,
       this.link,
       this.award,
       this.industry});
 }
 
-enum PortoWorks { PERSONAL, OFFICE, OPEN_SOURCE }
+enum PortoWorks { PERSONAL_PROJECT, OFFICE_TASK, OPEN_SOURCE }
 
 enum PortoType { ANDROID, IOS, FLUTTER, WEB_FRONT_END, WEB_BACK_END }
 
-enum PortoTech {
-  JAVA,
-  KOTLIN,
-  SWIFT,
-  PHP,
-  LARAVEL,
-  SQL,
-  JAVASCRIPT,
-  CSS,
-  HTML,
-  BOOTSTRAP,
-  DART,
-  FLUTTER
+class PortoTech {
+  static const String JAVA = "Java";
+  static const String KOTLIN = "Kotlin";
+  static const String SWIFT = "Swift";
+  static const String PHP = "Php";
+  static const String LARAVEL = "Laravel";
+  static const String SQL = "SQL";
+  static const String JAVASCRIPT = "JavaScript";
+  static const String CSS = "Css";
+  static const String HTML = "Html";
+  static const String BOOTSTRAP = "Bootstrap";
+  static const String DART = "Dart";
+  static const String FLUTTER = "Flutter";
 }
