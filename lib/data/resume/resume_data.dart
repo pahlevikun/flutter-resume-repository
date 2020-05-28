@@ -354,11 +354,9 @@ class ResumeData {
       Expertise(
           title: "Flutter App Development",
           body:
-              "Make a prototype and developed Best Quality of native Swift code "
-              "when translating the user interface. Keep and use the Apple's "
-              "conventional rule when developing the application with XCode. "
-              "Deployed application and identify bugs, user experience issues, "
-              "and functionality problems for maintaining the application."),
+              "Make a prototype and developed Best Quality of Flutter application "
+              "with beautiful, natively compiled applications for mobile, web, "
+              "and desktop from a single codebase."),
       Expertise(
           title: "Web App Development",
           body:
@@ -369,10 +367,9 @@ class ResumeData {
       Expertise(
           title: "Project Management",
           body:
-              "Build best first impression for user when visiting the site with "
-              "quality of front-end development and supported with best back-end development "
-              "from powerfull backend framework. Deployed application and identify bugs, "
-              "user experience issues, and functionality problems for maintaining the application.")
+              "The ability to communicate with people at all levels is almost "
+              "always named as the important skill for managing software development "
+              "following by strong leadership, good decision maker, also technical expertise.")
     ];
   }
 
