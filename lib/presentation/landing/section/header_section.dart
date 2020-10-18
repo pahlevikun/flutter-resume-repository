@@ -90,7 +90,7 @@ class HeaderSection extends StatelessWidget {
                           horizontal: SizeConfig.LARGE_SMALL_SIZE,
                           vertical: SizeConfig.SMALL_SIZE),
                       onPressed: (){
-                        js.context.callMethod('open', ['/files/CV_20201019.pdf']);
+                        js.context.callMethod('open', ['/assets/files/CV_20201019.pdf']);
                       },
                       color: AppConfig.secondaryColor,
                       shape: RoundedRectangleBorder(
