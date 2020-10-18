@@ -243,6 +243,13 @@ class ResumeData {
               "\n\t- Platformization, making new architecture "
               "\n\t- Promo Recommended Campaign"),
       Experience(
+          title: "Shareholder & Technical Advisor",
+          company: "Digiva.id",
+          duration: "Jul 2020 - Present",
+          image: "images/job-9.png",
+          description:
+          "Digiva.id is my very own startup, currently I'm not involved directly, I'm only a majority shareholder and giving advice for technical architecture if needed."),
+      Experience(
           title: "Jr. Android Developer",
           company: "Midtrans | Gojek Group",
           duration: "Jun 2018 - Dec 2018",
