@@ -269,7 +269,7 @@ class ResumeData {
               "\n• Midtrans Mobile"
               "\n• GO-Merchant SDK (Continue some feature)"),
       Experience(
-          title: "Android Developer",
+          title: "Software Engineer",
           company: "PT. Deggan Technowave",
           duration: "Feb 2017 - May 2018",
           image: "images/job-3.png",
