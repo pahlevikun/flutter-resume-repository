@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:pahlevikun.github.io/common/config/app_config.dart';
 import 'package:pahlevikun.github.io/common/config/screen_util.dart';
 import 'package:pahlevikun.github.io/common/widget/page_title.dart';
 import 'package:pahlevikun.github.io/common/widget/responsive_widget.dart';
 import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
 import 'package:pahlevikun.github.io/presentation/base_page.dart';
+import 'package:pahlevikun.github.io/presentation/landing/section/contact/contact_contract.dart';
+import 'package:pahlevikun.github.io/presentation/landing/section/contact/contact_presenter.dart';
 
 class ContactSection extends StatefulWidget {
   ContactSection(GlobalKey key) : super(key: key);
@@ -15,22 +16,61 @@ class ContactSection extends StatefulWidget {
   _ContactSectionState createState() => _ContactSectionState();
 }
 
-class _ContactSectionState extends State<ContactSection> {
+class _ContactSectionState extends State<ContactSection>
+    implements ContactContract {
   final _formKey = GlobalKey<FormState>();
-  final nameController = TextEditingController();
-  final emailController = TextEditingController();
-  final subjectController = TextEditingController();
-  final messageController = TextEditingController();
+  final _nameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _subjectController = TextEditingController();
+  final _messageController = TextEditingController();
 
   bool isSubmitting = false;
+  ContactPresenter _presenter;
+
+  @override
+  void initState() {
+    super.initState();
+    _presenter = ContactPresenter(this);
+  }
 
   @override
   void dispose() {
-    nameController.dispose();
-    emailController.dispose();
-    subjectController.dispose();
-    messageController.dispose();
+    _nameController.dispose();
+    _emailController.dispose();
+    _subjectController.dispose();
+    _messageController.dispose();
     super.dispose();
+  }
+
+  @override
+  void successSentMail() {
+    Scaffold.of(context).showSnackBar(
+      SnackBar(
+        content: Text("Success, thanks for your message!"),
+        backgroundColor: Colors.green,
+      ),
+    );
+    _nameController.clear();
+    _emailController.clear();
+    _subjectController.clear();
+    _messageController.clear();
+    toggleIsSubmitting(false);
+  }
+
+  @override
+  void failedSentMail() {
+    Scaffold.of(context).showSnackBar(
+      SnackBar(
+        content: Text("Sorry, something went wrong, please do manually :)"),
+        backgroundColor: Colors.red,
+      ),
+    );
+    toggleIsSubmitting(false);
+  }
+
+  @override
+  void showLoading() {
+    toggleIsSubmitting(true);
   }
 
   @override
@@ -154,50 +194,12 @@ class _ContactSectionState extends State<ContactSection> {
 
   void submit() async {
     if (_formKey.currentState.validate() && !isSubmitting) {
-      final name = nameController.text.trim();
-      final email = emailController.text.trim();
-      final subject = subjectController.text.trim();
-      final message = messageController.text.trim();
-      final targetMail = ResumeData.getData().email;
-      try {
-        toggleIsSubmitting(true);
-        var response = await http.post(ResumeData.MESSAGE_API, body: {
-          "name": name,
-          "email": email,
-          "subject": subject,
-          "target_mail": targetMail,
-          "message": message,
-        });
-        final statusCode = response.statusCode;
-        if (statusCode == 200) {
-          Scaffold.of(context).showSnackBar(
-            SnackBar(
-              content: Text("Thank for your message ^^~"),
-              backgroundColor: Colors.green,
-            ),
-          );
-          nameController.clear();
-          emailController.clear();
-          subjectController.clear();
-          messageController.clear();
-        } else {
-          Scaffold.of(context).showSnackBar(
-            SnackBar(
-              content: Text("Something went wrong :("),
-              backgroundColor: Colors.red,
-            ),
-          );
-        }
-        toggleIsSubmitting(false);
-      } on Exception catch (e) {
-        Scaffold.of(context).showSnackBar(
-          SnackBar(
-            content: Text("Something went wrong :("),
-            backgroundColor: Colors.red,
-          ),
-        );
-        toggleIsSubmitting(false);
-      }
+      final name = _nameController.text.trim();
+      final email = _emailController.text.trim();
+      final subject = _subjectController.text.trim();
+      final message = _messageController.text.trim();
+
+      _presenter.sendMail(email, subject, name, message);
     }
   }
 
@@ -216,14 +218,14 @@ class _ContactSectionState extends State<ContactSection> {
                     Icons.email, "Email", ResumeData.getData().email),
               ),
               Expanded(
-                child: buildTextFormField("Your name", nameController),
+                child: buildTextFormField("Your name", _nameController),
                 flex: 2,
               ),
               SizedBox(width: 12),
               Expanded(
                 child: buildTextFormField(
                   "Email address",
-                  emailController,
+                  _emailController,
                   isEmail: true,
                 ),
                 flex: 2,
@@ -242,7 +244,7 @@ class _ContactSectionState extends State<ContactSection> {
                     ResumeData.getData().location),
               ),
               Expanded(
-                child: buildTextFormField("Subject", subjectController),
+                child: buildTextFormField("Subject", _subjectController),
                 flex: 2,
               ),
             ],
@@ -260,7 +262,7 @@ class _ContactSectionState extends State<ContactSection> {
                     height: 124,
                     child: buildTextFormField(
                       "Message",
-                      messageController,
+                      _messageController,
                       maxLines: 4,
                     ),
                   ),
@@ -286,13 +288,13 @@ class _ContactSectionState extends State<ContactSection> {
         buildContactItem(
             Icons.my_location, "Location", ResumeData.getData().location),
         space,
-        buildTextFormField("Your name", nameController),
+        buildTextFormField("Your name", _nameController),
         smallSpace,
-        buildTextFormField("Email address", emailController, isEmail: true),
+        buildTextFormField("Email address", _emailController, isEmail: true),
         smallSpace,
-        buildTextFormField("Subject", subjectController),
+        buildTextFormField("Subject", _subjectController),
         smallSpace,
-        buildTextFormField("Message", messageController, maxLines: 4),
+        buildTextFormField("Message", _messageController, maxLines: 4),
         space,
         buildSubmitButton(),
       ],

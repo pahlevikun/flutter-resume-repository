@@ -2,6 +2,18 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "archive",
+      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/archive-2.0.13",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "args",
+      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/args-1.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.3"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/async-2.4.1",
       "packageUri": "lib/",
@@ -20,12 +32,6 @@
       "languageVersion": "2.0"
     },
     {
-      "name": "clock",
-      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/clock-1.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
       "name": "collection",
       "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/collection-1.14.12",
       "packageUri": "lib/",
@@ -39,7 +45,7 @@
     },
     {
       "name": "crypto",
-      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.3",
+      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.1"
     },
@@ -54,12 +60,6 @@
       "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/dio-3.0.9",
       "packageUri": "lib/",
       "languageVersion": "2.4"
-    },
-    {
-      "name": "fake_async",
-      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/fake_async-1.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.2"
     },
     {
       "name": "fluro",
@@ -134,6 +134,12 @@
       "languageVersion": "2.3"
     },
     {
+      "name": "image",
+      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/image-2.1.12",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "intl",
       "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/intl-0.15.8",
       "packageUri": "lib/",
@@ -153,7 +159,7 @@
     },
     {
       "name": "path",
-      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/path-1.7.0",
+      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/path-1.6.4",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -210,6 +216,12 @@
       "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-1.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.1"
+    },
+    {
+      "name": "quiver",
+      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/quiver-2.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
     },
     {
       "name": "rxdart",
@@ -303,9 +315,9 @@
     },
     {
       "name": "xml",
-      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/xml-3.5.0",
+      "rootUri": "file:///Users/farhanyudapahlevi/.pub-cache/hosted/pub.dartlang.org/xml-3.6.1",
       "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "2.6"
     },
     {
       "name": "pahlevikun.github.io",
@@ -314,7 +326,7 @@
       "languageVersion": "2.8"
     }
   ],
-  "generated": "2020-05-28T16:07:36.840769Z",
+  "generated": "2020-10-18T16:28:35.246970Z",
   "generator": "pub",
-  "generatorVersion": "2.9.0-11.0.dev.flutter-e007545c42"
+  "generatorVersion": "2.8.0"
 }

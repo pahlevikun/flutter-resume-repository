@@ -1,5 +1,3 @@
-import 'dart:html' as html;
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -54,8 +52,7 @@ class _LandingPageState extends State<LandingPage> {
   }
 
   void _hireMe() {
-    /*scrollToIndex(keys.length - 1);*/
-    html.window.open("mailto:pahlevi.kun@gmail.com", "contact");
+    scrollToIndex(10);
   }
 
   Widget _homePage() {
@@ -106,10 +103,7 @@ class _LandingPageState extends State<LandingPage> {
           _addPadding(),
           BlogSection(keys[9]),
           _addPadding(),
-          Visibility(
-            visible: false,
-            child: ContactSection(keys[10]),
-          ),
+          ContactSection(keys[10])
         ],
       ),
     );

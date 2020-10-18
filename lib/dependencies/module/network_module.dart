@@ -6,7 +6,7 @@ class NetworkModule {
   static const int CONNECT_TIME_OUT = 20000;
   static const int RECEIVE_TIME_OUT = 15000;
 
-  buildDio() {
+  Dio buildDio() {
     if (BuildConfig.isDebugMode) {
       return _attachInterceptorWith(_initDio());
     } else {
@@ -14,7 +14,7 @@ class NetworkModule {
     }
   }
 
-  _initDio() {
+  Dio _initDio() {
     BaseOptions options = BaseOptions(
       connectTimeout: CONNECT_TIME_OUT,
       receiveTimeout: RECEIVE_TIME_OUT,
@@ -23,7 +23,7 @@ class NetworkModule {
     return dio;
   }
 
-  _attachInterceptorWith(Dio dio) {
+  Dio _attachInterceptorWith(Dio dio) {
     dio.interceptors.add(DioInterceptor(
         requestHeader: true,
         requestBody: true,
