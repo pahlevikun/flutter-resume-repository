@@ -15,7 +15,7 @@ class ResumeData {
   static ResumeModel getData() => ResumeModel(
       webTitle: "Farhan Yuda Pahlevi | Personal Site",
       introduce:
-          "Experienced Android Engineer with a demonstrated history of working in the software engineering industry since 2013 and still continues.",
+          "Experienced Software Engineer with a demonstrated history of working in the technology industry starting 2013 and still continues.",
       name: "Farhan Yuda Pahlevi",
       job: "Software Engineer",
       email: "pahlevi.kun@gmail.com",
@@ -28,11 +28,10 @@ class ResumeData {
       linkedin: "https://linkedin.com/in/pahlevikun",
       twitter: "https://twitter.com/pahlevikun",
       about:
-          "Strong engineering professional with a Bachelor of Engineering (BE) focused in Informatics Engineering from Gunadarma University. "
-          "Skilled in Web Development and Mobile Development mostly in Android using Java or Kotlin. Dedicated to continuously develop, "
-          "implement, and adopt new technologies to maximize development efficiency and produce innovative solution. "
-          "Farhan have a big dream with his ability to help many people with a user friendly application for everyone and make big social impact to Indonesia. "
-          "In September 2017 Farhan become Google Certified Associate Android Developer by scholarship from Udacity and join Midtrans (Gojek Group) in June 2018.",
+          "Strong engineering professional with a Bachelor of Engineering (BE) focused on Informatics Engineering from Gunadarma University. "
+          "Dedicated to continuously develop, implement, and adopt new technologies to maximize development efficiency and produce an innovative solution. "
+          "Got a Udacity Nanodegree scholarship and become Google Certified Associate Android Developer in September 2017. "
+          "Currently working as Android Engineer at Gojek but have other experience such as native iOS Development, Flutter Development on frontend side and also PHP Laravel, Go, and Fullstack JavaScript on the backend side.",
       aboutInfo: _buildAboutInfo(),
       expertise: _buildExpertise(),
       technicalSkill: _buildTechnicalSkill(),
@@ -232,18 +231,36 @@ class ResumeData {
               "GO-JEK has been a one stop application for daily needs in Indonesia, "
               "revolutionizing solutions from transport, logistics and lifestyle services."
               "\n\nResponsibility :"
+              "\n• Design and build highly scalable, reliable, and fault-tolerant systems"
+              "\n• Unit-testing code for robustness, usability, and general reliability"
               "\n• Build Android Application from the scratch"
               "\n• Build Best Quality for Mobile Android SDK"
+              "\n• Bug fixing and improving application performance"
+              "\n• Work with outside data sources, APIs, and integrate outside party"
+              "\n• Continuously discover, and implement new technologies to maximize development efficiency"
+              "\n• Collaborate with cross-functional teams to define, design, and ship new features"
               "\n\nWork on :"
               "\n• Midtrans Android SDK "
-              "\n\t- Supporting merchants "
-              "\n\t- Maintain SDK"
-              "\n• GoBiz (Previously GO-RESTO) "
-              "\n\t- Express onboarding feature "
-              "\n\t- Platformization, making new architecture "
-              "\n\t- Promo Recommended Campaign"),
+              "\n\t- Supporting merchants integrate with Midtrans Android SDK"
+              "\n\t- Maintain Midtrans Android SDK"
+              "\n• GoBiz Platform (Previously GO-RESTO) "
+              "\n\t- Express onboarding 1.0, enabling self-registration as a merchant"
+              "\n\t- Platformisation, enabling multiple team on project with new architecture"
+              "\n\t- Rebranding, updating GoBiz theme to the new scheme"
+              "\n\t- Payment, enabling capability for receive debit/credit card as payment"
+              "\n\t- Internationalisation, enabling GoBiz running in multiple nation"
+              "\n\t- Helpcenter, integrating Gojek in-house help SDK"
+              "\n• Monetisation & Promo Platform"
+              "\n\t- Recommended Campaign, enabling merchant self join promo campaign"
+              "\n\t- Social Share, enable merchant share menu on social media"
+              "\n\t- Cart & Delivery Discount, enable merchant give a discount on GoFood checkout"
+              "\n\t- SKU Recommendation, add recommendation item"
+              "\n\t- Chart Analytics Report, show promo reporting"
+              "\n• Self-Serve"
+              "\n\t- DataScience camera implementation for detecting Face and KTP"
+      ),
       Experience(
-          title: "Shareholder & Technical Advisor",
+          title: "Shareholder & Advisor",
           company: "Digiva.id",
           duration: "Jul 2020 - Present",
           image: "images/job-9.png",

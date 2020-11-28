@@ -15,6 +15,7 @@ version: 1.0.0+1
 
 #TODO:
 # - need to compile using flutter v1.15.17
+# - if you find Can't use `Diagnosticable` please follow this >> https://github.com/dnfield/flutter_svg/issues/368#issuecomment-667117006 replase Diagnosticable >> DiagnosticableMixin
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

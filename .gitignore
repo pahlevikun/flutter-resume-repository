@@ -1,2 +1,10 @@
 /build/
 /lib/api_key.dart
+/.dart_tool/
+/.dart_tool/build/
+/.dart_tool/build_resolvers/
+/.dart_tool/chrome-device/Default/Local Storage/leveldb/
+/.dart_tool/flutter_build/
+/.dart_tool/package_config_subset
+.dart_tool
+.idea
