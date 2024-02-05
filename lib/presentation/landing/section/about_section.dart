@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/common/widget/page_title.dart';
-import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/di/injector.dart';
+import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
 import 'package:pahlevikun.github.io/presentation/base_page.dart';
+import 'package:pahlevikun.github.io/presentation/widget/page_title.dart';
 
 class AboutSection extends StatelessWidget {
+  final _useCase = Injector.locator<GetResumeDataUseCase>();
   final Function hireMe;
 
   final double _avatarSize = 108;
@@ -14,6 +16,7 @@ class AboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BasePage(
+      color: Colors.white,
       child: Padding(
         padding: SizeConfig.PAGE_CONTENT_PADDING,
         child: LayoutBuilder(
@@ -35,7 +38,7 @@ class AboutSection extends StatelessWidget {
                       height: _avatarSize,
                       child: CircleAvatar(
                         backgroundImage:
-                            AssetImage(ResumeData.getData().avatar),
+                            AssetImage(_useCase.execute({}).avatar),
                         backgroundColor: Colors.white,
                       ),
                     ),
@@ -55,7 +58,7 @@ class AboutSection extends StatelessWidget {
                           ),
                           SizedBox(height: SizeConfig.LARGE_SMALL_SIZE),
                           Text(
-                            ResumeData.getData().about,
+                            _useCase.execute({}).about,
                             textAlign: TextAlign.justify,
                             style: TextStyle(
                               fontSize: SizeConfig.BODY_2_FONT_SIZE,
@@ -66,7 +69,7 @@ class AboutSection extends StatelessWidget {
                           LayoutBuilder(
                             builder: (_, constrain) => Wrap(
                               direction: Axis.horizontal,
-                              children: ResumeData.getData()
+                              children: _useCase.execute({})
                                   .aboutInfo
                                   .entries
                                   .toList()
@@ -93,8 +96,8 @@ class AboutSection extends StatelessWidget {
   }
 
   Widget _multiChildLayout({
-    bool forTablet,
-    List<Widget> children,
+    required bool forTablet,
+    required List<Widget> children,
   }) {
     Widget result;
     if (!forTablet) {

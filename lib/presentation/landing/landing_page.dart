@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
-import 'package:pahlevikun.github.io/common/config/app_config.dart';
-import 'package:pahlevikun.github.io/common/config/screen_util.dart';
+import 'package:pahlevikun.github.io/config/app_config.dart';
+import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/di/injector.dart';
+import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
 import 'package:pahlevikun.github.io/presentation//landing/section/header_section.dart';
 import 'package:pahlevikun.github.io/presentation/landing/menu/app_bar_mobile.dart';
 import 'package:pahlevikun.github.io/presentation/landing/menu/navigation.dart';
@@ -60,7 +61,7 @@ class _LandingPageState extends State<LandingPage> {
       child: Stack(
         children: <Widget>[
           Opacity(
-            child: Navigation((_) {}),
+            child: Navigation(onTap: (_) {}),
             opacity: 0,
           ),
           Positioned.fill(
@@ -82,7 +83,10 @@ class _LandingPageState extends State<LandingPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Visibility(visible: !forTablet, child: AppBarMobile()),
+          Visibility(
+            visible: !forTablet,
+            child: AppBarMobile(),
+          ),
           _homePage(),
           _addPadding(),
           AboutSection(keys[1], _hireMe),
@@ -111,10 +115,10 @@ class _LandingPageState extends State<LandingPage> {
 
   void scrollToIndex(int index) {
     Scrollable.ensureVisible(
-      keys[index].currentContext,
+      keys[index].currentContext!,
       duration: Duration(milliseconds: 500),
     );
-    if (_scaffoldKey.currentState.isDrawerOpen) {
+    if (_scaffoldKey.currentState?.isDrawerOpen == true) {
       Navigator.of(context).pop();
     }
   }
@@ -122,9 +126,11 @@ class _LandingPageState extends State<LandingPage> {
   Widget _buildNavigation(bool forTablet) {
     return Padding(
       padding: EdgeInsets.only(top: forTablet ? SizeConfig.LARGE_SIZE : 0),
-      child: Navigation((index) {
-        scrollToIndex(index);
-      }),
+      child: Navigation(
+        onTap: (index) {
+          scrollToIndex(index);
+        },
+      ),
     );
   }
 

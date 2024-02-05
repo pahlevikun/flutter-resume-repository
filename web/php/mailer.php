@@ -14,7 +14,7 @@
         "Access-Control-Allow-Headers: Origin,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
         "Access-Control-Allow-Methods: POST, OPTIONS",
     );
-    $json = '{"personalizations":[{"to":[{"email":"pahlevi.kun@gmail.com"}],"subject":"'.$subject.'"}],"content": [{"type": "text/plain", "value": "'.$name.' - ('.$email.')\n'.$message.'"}],"from":{"email":"pahlevikun.id@gmail.com"}}';
+    $json = '{"personalizations":[{"to":[{"email":"farhan.y.pahlevi@gmail.com"}],"subject":"'.$subject.'"}],"content": [{"type": "text/plain", "value": "'.$name.' - ('.$email.')\n'.$message.'"}],"from":{"email":"pahlevikun.id@gmail.com"}}';
 
     $ch = curl_init ();
     curl_setopt ( $ch, CURLOPT_URL, $url );

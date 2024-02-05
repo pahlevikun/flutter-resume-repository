@@ -1,40 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bc60f063-7fd9-44b6-97b0-46998ea4e98e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/data/repository/online/request/send_grid_request.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/domain/usecase/send_mail_usecase.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/landing/section/contact/contact_contract.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/landing/section/contact/contact_presenter.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/php/mailer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/MANIFEST-000001" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/MANIFEST-000001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.fvm/flutter_sdk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.fvm/fvm_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-v21/launch_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values-night/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/config/color_config.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/config/size_config.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/repository/mailer_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/repository/medium_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/repository/repository_module.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/repository/resume_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/source/local/local_gateway.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/source/local/local_module.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/source/remote/remote_gateway.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/source/remote/remote_module.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/source/remote/service/mailer_api_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/source/remote/service/medium_api_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/source/remote/service/model/request/mailer_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/source/remote/service/service_module.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/di/application_module.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/di/injector.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/domain/contract/mailer_repository_contract.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/domain/contract/medium_repository_contract.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/domain/contract/resume_repository_contract.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/domain/contract/usecase.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/domain/model/email.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/domain/model/feed.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/domain/model/medium.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/domain/model/story.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/domain/usecase/get_resume_data_usecase.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/router/app_route_registry.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/router/navigation_dispatcher.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/router/router_module.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/preferences" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/preferences" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/repository/online/online_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/repository/online/online_repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/resume/resume_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/resume/resume_data.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dependencies/locator/usecase_locator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dependencies/locator/usecase_locator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dependencies/module/network_module.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dependencies/module/network_module.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/build_config.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/config/app_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/app_config.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/config/screen_util.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/event/global_event_helper.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/theme/base_theme.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/theme/theme.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/view/animated_text.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/view/button.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/view/menu_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/view/menu_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/view/react_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/view/react_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/widget/hex_color.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/widget/page_title.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/widget/page_title.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/widget/responsive_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/widget/responsive_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/widget/restart_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/widget/restart_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/repository/online/online_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/repository/online/request/send_grid_request.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/repository/online/response/medium_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/source/remote/service/model/response/medium_response.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/award.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/model/award.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/education.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/model/education.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/experience.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/model/experience.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/expertise.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/model/expertise.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/portofolio.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/model/portofolio.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/resume.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/model/resume.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/skill.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/model/skill.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/resume/model/volunteer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/model/volunteer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/resume/resume_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/source/local/data/resume_data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dependencies/locator/application_locator.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dependencies/locator/repository_locator.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dependencies/locator/usecase_locator.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dependencies/module/dio_interceptor.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dependencies/module/network_module.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/domain/usecase/get_medium_stories_usecase.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/usecase/get_medium_stories_usecase.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/domain/usecase/send_mail_usecase.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/usecase/send_mail_usecase.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/base_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/base_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/presentation/landing/landing_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/landing_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/menu/app_bar_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/menu/app_bar_mobile.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/presentation/landing/menu/navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/menu/navigation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/about_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/about_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/awards_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/awards_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/blog/blog_contract.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/blog/blog_contract.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/blog/blog_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/blog/blog_presenter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/blog/blog_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/blog/blog_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/contact/contact_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/contact/contact_presenter.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/contact/contact_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/contact/contact_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/education_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/education_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/experience_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/experience_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/expertise_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/expertise_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/header_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/header_section.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/portofolio_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/portofolio_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/skill_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/skill_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/volunteer_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/volunteer_section.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/php/mailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/php/mailer.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
@@ -43,46 +127,75 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="revamp-and-update" />
+                    <option name="lastUsedInstant" value="1707091780" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1707091779" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="1aEb6KiH3GFnHtYfEfRw8IQCLBW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">
-    <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "flutter.view.tool.window.visible": "true",
+    "git-widget-placeholder": "revamp-and-update",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/Users/farhan.pahlevi/Documents/Projects/Personal/• Flutter/flutter-resume-repository/lib/data/repository",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/assets" />
-      <recent name="$PROJECT_DIR$/assets/images" />
-      <recent name="$PROJECT_DIR$/web/icons" />
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/lib/common/view" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/domain/usecase" />
-      <recent name="$PROJECT_DIR$/lib/presentation/landing/section/contact" />
-      <recent name="$PROJECT_DIR$/lib/data/resume/model" />
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/image" />
+      <recent name="$PROJECT_DIR$/lib/data/repository" />
+      <recent name="$PROJECT_DIR$/lib/domain/contract" />
+      <recent name="$PROJECT_DIR$/lib/domain/model" />
+      <recent name="$PROJECT_DIR$/lib/data/source/remote/service" />
+      <recent name="$PROJECT_DIR$/lib/data/source/remote/service/model/request" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/data/source/local/data" />
+      <recent name="$PROJECT_DIR$/lib/config" />
+      <recent name="$PROJECT_DIR$/lib/data/source/remote/service" />
+      <recent name="$PROJECT_DIR$/lib/domain/model" />
+      <recent name="$PROJECT_DIR$/web/assets" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -224,9 +337,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -251,5 +362,46 @@
     <MESSAGE value="Fix assets for web &amp; awards section" />
     <MESSAGE value="Update gitignore for not push apikey" />
     <option name="LAST_COMMIT_MESSAGE" value="Update gitignore for not push apikey" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/main.dart</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/main.dart</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/main.dart</url>
+          <line>19</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/data/source/remote/service/service_module.dart</url>
+          <line>99</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/data/source/remote/service/service_module.dart</url>
+          <line>85</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/data/source/remote/service/service_module.dart</url>
+          <line>19</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/data/source/remote/service/service_module.dart</url>
+          <line>31</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/common/view/react_button.dart';
-import 'package:pahlevikun.github.io/common/widget/page_title.dart';
-import 'package:pahlevikun.github.io/data/repository/online/response/medium_response.dart';
+import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/domain/model/story.dart';
+import 'package:pahlevikun.github.io/presentation/view/react_button.dart';
+import 'package:pahlevikun.github.io/presentation/widget/page_title.dart';
 import 'package:pahlevikun.github.io/presentation/base_page.dart';
 import 'package:pahlevikun.github.io/presentation/landing/section/blog/blog_contract.dart';
 import 'package:pahlevikun.github.io/presentation/landing/section/blog/blog_presenter.dart';
@@ -18,14 +18,14 @@ class BlogSection extends StatefulWidget {
 }
 
 class _BlogSectionState extends State<BlogSection> implements BlogContract {
-  BlogPresenter presenter;
+  late BlogPresenter presenter;
   List<Story> mediumStories = [];
   BlogState state = BlogState.LOADING;
 
   @override
   void initState() {
     super.initState();
-    presenter = BlogPresenter(this);
+    presenter = BlogPresenter(view: this);
     presenter.fetchData();
   }
 

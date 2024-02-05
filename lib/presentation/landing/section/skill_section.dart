@@ -1,10 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/common/widget/page_title.dart';
-import 'package:pahlevikun.github.io/data/resume/model/skill.dart';
-import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/di/injector.dart';
+import 'package:pahlevikun.github.io/domain/model/resume.dart';
+import 'package:pahlevikun.github.io/domain/model/skill.dart';
+import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
 import 'package:pahlevikun.github.io/presentation/base_page.dart';
+import 'package:pahlevikun.github.io/presentation/widget/page_title.dart';
 
 class SkillSection extends StatefulWidget {
   SkillSection(GlobalKey key) : super(key: key);
@@ -14,6 +15,9 @@ class SkillSection extends StatefulWidget {
 }
 
 class _SkillSectionState extends State<SkillSection> {
+  final _useCase = Injector.locator<GetResumeDataUseCase>();
+  late ResumeModel _data = _useCase.execute({});
+
   @override
   Widget build(BuildContext context) {
     return BasePage(
@@ -26,16 +30,20 @@ class _SkillSectionState extends State<SkillSection> {
             PageTitle("Skills"),
             SizedBox(height: SizeConfig.LARGE_SIZE),
             Text(
-              ResumeData.getData().introSkill,
+              _data.introSkill,
               style: TextStyle(
                 fontSize: SizeConfig.BODY_2_FONT_SIZE,
                 color: Colors.grey,
               ),
             ),
             _buildSkill(
-                "Industry Knowledge", ResumeData.getData().industrySkill),
+              "Industry Knowledge",
+              _data.industrySkill,
+            ),
             _buildSkill(
-                "Technical Knowledge", ResumeData.getData().technicalSkill)
+              "Technical Knowledge",
+              _data.technicalSkill,
+            )
           ],
         ),
       ),

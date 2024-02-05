@@ -1,11 +1,12 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:pahlevikun.github.io/common/config/app_config.dart';
-import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/common/widget/page_title.dart';
-import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/config/app_config.dart';
+import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/di/injector.dart';
+import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
 import 'package:pahlevikun.github.io/presentation/base_page.dart';
+import 'package:pahlevikun.github.io/presentation/widget/page_title.dart';
 import 'package:timeline_list/timeline.dart';
 import 'package:timeline_list/timeline_model.dart';
 
@@ -17,7 +18,7 @@ class AwardsSection extends StatefulWidget {
 }
 
 class _AwardsSectionState extends State<AwardsSection> {
-  final _data = ResumeData.getData().awards;
+  final _useCase = Injector.locator<GetResumeDataUseCase>();
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class _AwardsSectionState extends State<AwardsSection> {
             PageTitle("Certificates, Awards & Honors"),
             Timeline.builder(
               itemBuilder: timelineItemBuilder,
-              itemCount: ResumeData.getData().experience.length,
+              itemCount: _useCase.execute({}).experience.length,
               position: TimelinePosition.Left,
               shrinkWrap: true,
             )
@@ -42,6 +43,7 @@ class _AwardsSectionState extends State<AwardsSection> {
   }
 
   TimelineModel timelineItemBuilder(BuildContext context, int position) {
+    final _data = _useCase.execute({}).award;
     final data = _data[position];
     return TimelineModel(
         Padding(

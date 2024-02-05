@@ -1,25 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:pahlevikun.github.io/common/config/app_config.dart';
-import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/common/view/menu_button.dart';
-import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/config/app_config.dart';
+import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/di/injector.dart';
+import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
+import 'package:pahlevikun.github.io/presentation/view/menu_button.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class Navigation extends StatelessWidget {
   final Function onTap;
+  final _useCase = Injector.locator<GetResumeDataUseCase>();
 
-  Navigation(this.onTap);
+  Navigation({required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return _buildNavigation();
   }
 
-  Widget _buildNavigationOption(
-    String title,
-    IconData icon, {
-    Function onTap,
+  Widget _buildNavigationOption({
+    required String title,
+    required IconData icon,
+    required Function onTap,
   }) {
     return MenuButton(
       onTap: onTap,
@@ -52,7 +55,7 @@ class Navigation extends StatelessWidget {
       margin: EdgeInsets.only(right: SizeConfig.SMALL_LARGE_SIZE),
       child: FloatingActionButton(
         onPressed: () {
-          launch(url);
+          launchUrlString(url);
         },
         elevation: 2,
         backgroundColor: AppConfig.secondaryColor,
@@ -82,7 +85,7 @@ class Navigation extends StatelessWidget {
                 width: 96,
                 height: 96,
                 child: CircleAvatar(
-                  backgroundImage: AssetImage(ResumeData.getData().avatar),
+                  backgroundImage: AssetImage(_useCase.execute({}).avatar),
                   backgroundColor: Colors.white,
                 ),
               ),
@@ -91,7 +94,7 @@ class Navigation extends StatelessWidget {
                 text: TextSpan(
                   children: <TextSpan>[
                     TextSpan(
-                      text: ResumeData.getData().name,
+                      text: _useCase.execute({}).name,
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -103,7 +106,7 @@ class Navigation extends StatelessWidget {
               ),
               SizedBox(height: SizeConfig.TINY_SIZE),
               Text(
-                ResumeData.getData().job,
+                _useCase.execute({}).job,
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w200,
@@ -111,66 +114,106 @@ class Navigation extends StatelessWidget {
                 ),
               ),
               SizedBox(height: SizeConfig.LARGE_MEDIUM_SIZE),
-              _buildNavigationOption("Home", Icons.home, onTap: () {
-                this.onTap(0);
-              }),
-              _buildNavigationOption("About", Icons.account_box, onTap: () {
-                this.onTap(1);
-              }),
-              _buildNavigationOption("Expertise", FontAwesomeIcons.key,
-                  onTap: () {
-                this.onTap(2);
-              }),
-              _buildNavigationOption("Skills", Icons.book, onTap: () {
-                this.onTap(3);
-              }),
-              _buildNavigationOption("Experience", Icons.work, onTap: () {
-                this.onTap(4);
-              }),
-              _buildNavigationOption("Portfolio", Icons.extension, onTap: () {
-                this.onTap(5);
-              }),
-              _buildNavigationOption("Education", Icons.subject, onTap: () {
-                this.onTap(6);
-              }),
-              _buildNavigationOption("Certificate", Icons.vignette, onTap: () {
-                this.onTap(7);
-              }),
               _buildNavigationOption(
-                  "Activity & Volunteering", FontAwesomeIcons.footballBall,
-                  onTap: () {
-                this.onTap(8);
-              }),
-              _buildNavigationOption("Blog", Icons.style, onTap: () {
-                this.onTap(9);
-              }),
-              _buildNavigationOption("Contact", Icons.contacts,
-                  onTap: () {
-                    this.onTap(10);
-                  }),
+                title: "Home",
+                icon: Icons.home,
+                onTap: () {
+                  this.onTap(0);
+                },
+              ),
+              _buildNavigationOption(
+                title: "About",
+                icon: Icons.account_box,
+                onTap: () {
+                  this.onTap(1);
+                },
+              ),
+              _buildNavigationOption(
+                title: "Expertise",
+                icon: FontAwesomeIcons.key,
+                onTap: () {
+                  this.onTap(2);
+                },
+              ),
+              _buildNavigationOption(
+                title: "Skills",
+                icon: Icons.book,
+                onTap: () {
+                  this.onTap(3);
+                },
+              ),
+              _buildNavigationOption(
+                title: "Experience",
+                icon: Icons.work,
+                onTap: () {
+                  this.onTap(4);
+                },
+              ),
+              _buildNavigationOption(
+                title: "Portfolio",
+                icon: Icons.extension,
+                onTap: () {
+                  this.onTap(5);
+                },
+              ),
+              _buildNavigationOption(
+                title: "Education",
+                icon: Icons.subject,
+                onTap: () {
+                  this.onTap(6);
+                },
+              ),
+              _buildNavigationOption(
+                title: "Certificate",
+                icon: Icons.vignette,
+                onTap: () {
+                  this.onTap(7);
+                },
+              ),
+              _buildNavigationOption(
+                title: "Activity & Volunteering",
+                icon: FontAwesomeIcons.football,
+                onTap: () {
+                  this.onTap(8);
+                },
+              ),
+              _buildNavigationOption(
+                title: "Blog",
+                icon: Icons.style,
+                onTap: () {
+                  this.onTap(9);
+                },
+              ),
+              _buildNavigationOption(
+                title: "Contact",
+                icon: Icons.contacts,
+                onTap: () {
+                  this.onTap(10);
+                },
+              ),
               SizedBox(height: SizeConfig.LARGE_MEDIUM_SIZE),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   _buildLinkingButton(
                     FontAwesomeIcons.facebookF,
-                    ResumeData.getData().facebook,
+                    _useCase.execute({}).facebook,
                   ),
                   _buildLinkingButton(
                     FontAwesomeIcons.instagram,
-                    ResumeData.getData().instagram,
+                    _useCase.execute({}).instagram,
                   ),
                   _buildLinkingButton(
                     FontAwesomeIcons.githubAlt,
-                    ResumeData.getData().github,
+                    _useCase.execute({}).github,
                   ),
                   _buildLinkingButton(
                     FontAwesomeIcons.linkedinIn,
-                    ResumeData.getData().linkedin,
+                    _useCase.execute({}).linkedin,
                   ),
                   _buildLinkingButton(
                     FontAwesomeIcons.twitter,
-                    ResumeData.getData().twitter,
+                    _useCase.execute({}).twitter,
                   ),
                 ],
               ),
@@ -178,7 +221,7 @@ class Navigation extends StatelessWidget {
               Align(
                 alignment: Alignment.bottomLeft,
                 child: Text(
-                  ResumeData.getData().email,
+                  _useCase.execute({}).email,
                   style: TextStyle(
                     color: Colors.white.withOpacity(.5),
                     fontWeight: FontWeight.w100,

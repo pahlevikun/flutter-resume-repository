@@ -5,8 +5,8 @@ class BasePage extends StatelessWidget {
   final Widget child;
 
   BasePage({
-    this.color,
-    this.child,
+    required this.color,
+    required this.child,
   });
 
   @override

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:pahlevikun.github.io/common/config/app_config.dart';
-import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/config/app_config.dart';
+import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/di/injector.dart';
+import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
 import 'package:pahlevikun.github.io/presentation/base_page.dart';
 
 class AppBarMobile extends StatelessWidget {
+  final _useCase = Injector.locator<GetResumeDataUseCase>();
+
   @override
   Widget build(BuildContext context) {
     return BasePage(
@@ -27,7 +30,7 @@ class AppBarMobile extends StatelessWidget {
               width: SizeConfig.LARGE_SIZE,
               height: SizeConfig.LARGE_SIZE,
               child: CircleAvatar(
-                backgroundImage: AssetImage(ResumeData.getData().avatar),
+                backgroundImage: AssetImage(_useCase.execute({}).avatar),
                 backgroundColor: Colors.white,
               ),
             ),
@@ -36,7 +39,7 @@ class AppBarMobile extends StatelessWidget {
               text: TextSpan(
                 children: <TextSpan>[
                   TextSpan(
-                    text: ResumeData.getData().name,
+                    text: _useCase.execute({}).name,
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,

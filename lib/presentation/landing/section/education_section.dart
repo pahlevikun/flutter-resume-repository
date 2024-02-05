@@ -1,10 +1,12 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:pahlevikun.github.io/common/config/app_config.dart';
-import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/common/widget/page_title.dart';
-import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/config/app_config.dart';
+import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/di/injector.dart';
+import 'package:pahlevikun.github.io/domain/model/education.dart';
+import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
+import 'package:pahlevikun.github.io/presentation/widget/page_title.dart';
 import 'package:pahlevikun.github.io/presentation/base_page.dart';
 import 'package:timeline_list/timeline.dart';
 import 'package:timeline_list/timeline_model.dart';
@@ -17,7 +19,8 @@ class EducationSection extends StatefulWidget {
 }
 
 class _EducationSectionState extends State<EducationSection> {
-  final _data = ResumeData.getData().education;
+  final _useCase = Injector.locator<GetResumeDataUseCase>();
+  late List<Education> _data = _useCase.execute({}).education;
 
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/common/widget/page_title.dart';
-import 'package:pahlevikun.github.io/data/resume/model/volunteer.dart';
-import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/di/injector.dart';
+import 'package:pahlevikun.github.io/domain/model/resume.dart';
+import 'package:pahlevikun.github.io/domain/model/volunteer.dart';
+import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
 import 'package:pahlevikun.github.io/presentation/base_page.dart';
+import 'package:pahlevikun.github.io/presentation/widget/page_title.dart';
 
 class VolunteerSection extends StatefulWidget {
   VolunteerSection(GlobalKey key) : super(key: key);
@@ -13,6 +15,8 @@ class VolunteerSection extends StatefulWidget {
 }
 
 class _VolunteerSectionState extends State<VolunteerSection> {
+  final _useCase = Injector.locator<GetResumeDataUseCase>();
+  late ResumeModel _data = _useCase.execute({});
   Widget build(BuildContext context) {
     return BasePage(
       color: Colors.white,
@@ -120,7 +124,7 @@ class _VolunteerSectionState extends State<VolunteerSection> {
       scrollDirection: Axis.horizontal,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: ResumeData.getData()
+        children: _data
             .volunteer
             .map((e) => _buildVolunteer(e))
             .toList(),
