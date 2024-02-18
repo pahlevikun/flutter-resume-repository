@@ -42,7 +42,6 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constrain) {
-        print("width >>> ${constrain.maxWidth}");
         return constrain.maxWidth >= AppConfig.MIN_TABLET_SIZE
             ? _buildWebBrowserBody()
             : _buildTabletAndPhoneBody(

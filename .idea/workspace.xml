@@ -15,17 +15,9 @@
     <list default="true" id="bc60f063-7fd9-44b6-97b0-46998ea4e98e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/preferences" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/preferences" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/app_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/app_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/presentation/landing/landing_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/landing_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/menu/app_bar_mobile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/menu/app_bar_mobile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/menu/navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/menu/navigation.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/education_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/education_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/landing/section/experience_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/landing/section/experience_section.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707144499512</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Adjust layout for mobile phone">
+      <option name="closed" value="true" />
+      <created>1708251250171</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708251250171</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -295,7 +295,8 @@
     <MESSAGE value="Fix assets for web &amp; awards section" />
     <MESSAGE value="Update gitignore for not push apikey" />
     <MESSAGE value="Update flutter version and architecture" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update flutter version and architecture" />
+    <MESSAGE value="Adjust layout for mobile phone" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust layout for mobile phone" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
