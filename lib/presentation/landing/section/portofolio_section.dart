@@ -1,16 +1,17 @@
-// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_advanced_networkimage/provider.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:pahlevikun.github.io/common/config/screen_util.dart';
-import 'package:pahlevikun.github.io/common/theme/theme.dart';
-import 'package:pahlevikun.github.io/common/widget/hex_color.dart';
-import 'package:pahlevikun.github.io/common/widget/page_title.dart';
-import 'package:pahlevikun.github.io/data/resume/model/portofolio.dart';
-import 'package:pahlevikun.github.io/data/resume/resume_data.dart';
+import 'package:image_network/image_network.dart';
+import 'package:pahlevikun.github.io/config/app_config.dart';
+import 'package:pahlevikun.github.io/config/color_config.dart';
+import 'package:pahlevikun.github.io/config/page_config.dart';
+import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/di/injector.dart';
+import 'package:pahlevikun.github.io/domain/model/portofolio.dart';
+import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
 import 'package:pahlevikun.github.io/presentation/base_page.dart';
+import 'package:pahlevikun.github.io/presentation/widget/page_title.dart';
 
 class PortfolioSection extends StatefulWidget {
   PortfolioSection(GlobalKey key) : super(key: key);
@@ -20,12 +21,12 @@ class PortfolioSection extends StatefulWidget {
 }
 
 class _PortfolioSectionState extends State<PortfolioSection> {
-  final data = ResumeData.getData().portos;
+  final _useCase = Injector.locator<GetResumeDataUseCase>();
+  late List<Portfolio> data = _useCase.execute({}).portfolio;
 
   Widget build(BuildContext context) {
     data.shuffle();
     return BasePage(
-      color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -35,33 +36,45 @@ class _PortfolioSectionState extends State<PortfolioSection> {
               right: SizeConfig.HORIZONTAL_PADDING_SIZE,
               top: SizeConfig.VERTICAL_PADDING_SIZE,
             ),
-            child: PageTitle("Portfolio"),
+            child: PageTitle(PageConfig.portfolioTitle),
           ),
-          SizedBox(height: SizeConfig.LARGE_SIZE),
-          _buildExpertise(),
-          SizedBox(height: SizeConfig.LARGE_SIZE),
-          _buildPorto()
+          const SizedBox(height: SizeConfig.LARGE_SIZE),
+          _buildGitHub(),
+          const SizedBox(height: SizeConfig.LARGE_SIZE),
+          // _buildPorto(),
         ],
       ),
     );
   }
 
-  Widget _buildExpertise() {
+  Widget _buildGitHub() {
     return Padding(
       padding: const EdgeInsets.only(
         left: SizeConfig.HORIZONTAL_PADDING_SIZE,
         right: SizeConfig.HORIZONTAL_PADDING_SIZE,
       ),
-      child: InkWell(
-        onTap: () =>
-            html.window.open("https://github.com/pahlevikun", "github"),
-        child: Image(
-          width: double.infinity,
-          fit: BoxFit.fill,
-          image: AdvancedNetworkImage(
-            "https://ghchart.rshah.org/2274A5/pahlevikun",
-            useDiskCache: true,
-            cacheRule: CacheRule(maxAge: const Duration(days: 10)),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
+        child: Container(
+          color: AppConfig.backgroundNestedCard.withAlpha(75),
+          padding: const EdgeInsets.all(SizeConfig.MEDIUM_SIZE),
+          child: ImageNetwork(
+            image: "https://ghchart.rshah.org/98585c/pahlevikun",
+            width: 650,
+            height: 100,
+            duration: 5000,
+            curve: Curves.easeIn,
+            onPointer: true,
+            debugPrint: false,
+            fullScreen: true,
+            fitWeb: BoxFitWeb.scaleDown,
+            onLoading: CircularProgressIndicator(
+              color: AppConfig.secondaryColor,
+            ),
+            onTap: () => html.window.open(
+              "https://github.com/pahlevikun",
+              "github",
+            ),
           ),
         ),
       ),
@@ -87,47 +100,41 @@ class _PortfolioSectionState extends State<PortfolioSection> {
                 Text(
                   _getType(index),
                   textAlign: TextAlign.center,
-                  style: PahleviThemePicker.getTheme()
-                      .textTheme
-                      .headline2
-                      .copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16.0),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16.0,
+                  ),
                 ),
                 Text(
                   _getWorks(index),
                   textAlign: TextAlign.center,
-                  style: PahleviThemePicker.getTheme()
-                      .textTheme
-                      .bodyText2
-                      .copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w100,
-                          fontSize: 13.0),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w100,
+                    fontSize: 13.0,
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 15.0),
                   child: Text(
                     "- ${data[index].title} -",
                     textAlign: TextAlign.center,
-                    style: PahleviThemePicker.getTheme()
-                        .textTheme
-                        .bodyText2
-                        .copyWith(
-                            color: Colors.white,
-                            fontSize: 15.0,
-                            fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 15.0),
                   child: Text(
                     data[index].description,
-                    style: PahleviThemePicker.getTheme()
-                        .textTheme
-                        .bodyText2
-                        .copyWith(color: Colors.white, fontSize: 12.0),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12.0,
+                    ),
                   ),
                 )
               ],

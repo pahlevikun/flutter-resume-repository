@@ -88,10 +88,10 @@ class DateTimeUtils {
     if (year == 0) {
       return "-";
     } else {
-      final birthYear = DateTime(year);
-      Duration duration = DateTime.now().difference(birthYear);
+      final givenYear = DateTime(year);
+      Duration duration = DateTime.now().difference(givenYear);
       final differenceInYears = (duration.inDays / 365).floor().toString();
-      return "$differenceInYears Years old";
+      return "$differenceInYears";
     }
   }
 }
