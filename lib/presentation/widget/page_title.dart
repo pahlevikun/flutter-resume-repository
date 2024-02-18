@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pahlevikun.github.io/config/app_config.dart';
+import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/config/style_config.dart';
 
 class PageTitle extends StatelessWidget {
   final String title;
@@ -12,17 +15,15 @@ class PageTitle extends StatelessWidget {
       children: <Widget>[
         Text(
           title,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-          ),
+          style: StyleConfig.textStylePageTitle,
         ),
-        SizedBox(height: 12),
+        SizedBox(height: SizeConfig.TINY_LARGE_SIZE),
         Container(
-          width: 32,
+          width: 38,
           height: 4,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
+            color: AppConfig.secondaryColor,
+            borderRadius: BorderRadius.circular(24),
           ),
         )
       ],

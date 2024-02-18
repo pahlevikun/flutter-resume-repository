@@ -11,7 +11,7 @@ class BlogPresenter {
 
   void fetchData() {
     Single.fromCallable(() => view.showLoading())
-        .delay(Duration(seconds: 3))
+        .delay(Duration(seconds: 1))
         .flatMap((value) => _useCase.execute({}))
         .delay(Duration(seconds: 1))
         .listen(

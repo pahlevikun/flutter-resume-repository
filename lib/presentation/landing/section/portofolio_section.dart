@@ -1,10 +1,11 @@
-// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 
-import 'package:fast_cached_network_image/fast_cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:image_network/image_network.dart';
+import 'package:pahlevikun.github.io/config/app_config.dart';
 import 'package:pahlevikun.github.io/config/color_config.dart';
+import 'package:pahlevikun.github.io/config/page_config.dart';
 import 'package:pahlevikun.github.io/config/size_config.dart';
 import 'package:pahlevikun.github.io/di/injector.dart';
 import 'package:pahlevikun.github.io/domain/model/portofolio.dart';
@@ -26,7 +27,6 @@ class _PortfolioSectionState extends State<PortfolioSection> {
   Widget build(BuildContext context) {
     data.shuffle();
     return BasePage(
-      color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -36,30 +36,46 @@ class _PortfolioSectionState extends State<PortfolioSection> {
               right: SizeConfig.HORIZONTAL_PADDING_SIZE,
               top: SizeConfig.VERTICAL_PADDING_SIZE,
             ),
-            child: PageTitle("Portfolio"),
+            child: PageTitle(PageConfig.portfolioTitle),
           ),
-          SizedBox(height: SizeConfig.LARGE_SIZE),
-          _buildExpertise(),
-          SizedBox(height: SizeConfig.LARGE_SIZE),
-          _buildPorto()
+          const SizedBox(height: SizeConfig.LARGE_SIZE),
+          _buildGitHub(),
+          const SizedBox(height: SizeConfig.LARGE_SIZE),
+          // _buildPorto(),
         ],
       ),
     );
   }
 
-  Widget _buildExpertise() {
+  Widget _buildGitHub() {
     return Padding(
       padding: const EdgeInsets.only(
         left: SizeConfig.HORIZONTAL_PADDING_SIZE,
         right: SizeConfig.HORIZONTAL_PADDING_SIZE,
       ),
-      child: InkWell(
-        onTap: () =>
-            html.window.open("https://github.com/pahlevikun", "github"),
-        child: FastCachedImage(
-          url: "https://ghchart.rshah.org/2274A5/pahlevikun",
-          width: double.infinity,
-          fit: BoxFit.fill,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
+        child: Container(
+          color: AppConfig.backgroundNestedCard.withAlpha(75),
+          padding: const EdgeInsets.all(SizeConfig.MEDIUM_SIZE),
+          child: ImageNetwork(
+            image: "https://ghchart.rshah.org/98585c/pahlevikun",
+            width: 650,
+            height: 100,
+            duration: 5000,
+            curve: Curves.easeIn,
+            onPointer: true,
+            debugPrint: false,
+            fullScreen: true,
+            fitWeb: BoxFitWeb.scaleDown,
+            onLoading: CircularProgressIndicator(
+              color: AppConfig.secondaryColor,
+            ),
+            onTap: () => html.window.open(
+              "https://github.com/pahlevikun",
+              "github",
+            ),
+          ),
         ),
       ),
     );

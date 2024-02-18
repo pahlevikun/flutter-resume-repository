@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pahlevikun.github.io/config/app_config.dart';
+import 'package:pahlevikun.github.io/config/page_config.dart';
 import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/config/style_config.dart';
 import 'package:pahlevikun.github.io/di/injector.dart';
 import 'package:pahlevikun.github.io/domain/model/resume.dart';
 import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
@@ -33,36 +35,23 @@ class _HeaderSectionState extends State<HeaderSection> {
           color: AppConfig.primaryColor,
           child: Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: constrain.maxWidth / SizeConfig.SMALL_SIZE),
+              horizontal: constrain.maxWidth / SizeConfig.SMALL_LARGE_SIZE,
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Flexible(
-                  child: RichText(
-                    text: TextSpan(
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: _data.name,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: SizeConfig.HEADER_FONT_SIZE,
-                          ),
-                        ),
-                      ],
-                    ),
+                  child: Text(
+                    _data.name,
+                    style: StyleConfig.textStyleHeader,
                   ),
                 ),
                 SizedBox(height: SizeConfig.SMALL_LARGE_SIZE),
                 Text(
                   _data.introduce,
                   textAlign: TextAlign.left,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w100,
-                    fontSize: SizeConfig.SUB_HEADER_FONT_SIZE,
-                  ),
+                  style: StyleConfig.textStyleSubHeader,
                 ),
                 SizedBox(height: SizeConfig.LARGE_SIZE),
                 Wrap(
@@ -72,8 +61,9 @@ class _HeaderSectionState extends State<HeaderSection> {
                   children: <Widget>[
                     MaterialButton(
                       padding: EdgeInsets.symmetric(
-                          horizontal: SizeConfig.LARGE_SMALL_SIZE,
-                          vertical: SizeConfig.SMALL_SIZE),
+                        horizontal: SizeConfig.LARGE_SMALL_SIZE,
+                        vertical: SizeConfig.SMALL_LARGE_SIZE,
+                      ),
                       onPressed: () {
                         widget.hireMe.call();
                       },
@@ -83,26 +73,30 @@ class _HeaderSectionState extends State<HeaderSection> {
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Icon(
                             Icons.mail,
-                            color: Colors.white,
+                            color: AppConfig.textColor,
                           ),
                           SizedBox(width: SizeConfig.SMALL_SIZE),
                           Text(
-                            "Contact Me",
-                            style: TextStyle(color: Colors.white),
+                            PageConfig.headerContactMe,
+                            style: StyleConfig.textStyleCta,
                           ),
                         ],
                       ),
                     ),
-                    MaterialButton(
+                    /*MaterialButton(
                       padding: EdgeInsets.symmetric(
-                          horizontal: SizeConfig.LARGE_SMALL_SIZE,
-                          vertical: SizeConfig.SMALL_SIZE),
+                        horizontal: SizeConfig.LARGE_SMALL_SIZE,
+                        vertical: SizeConfig.SMALL_LARGE_SIZE,
+                      ),
                       onPressed: () {
                         js.context.callMethod(
-                            'open', ['/assets/files/CV_20201019.pdf']);
+                          'open',
+                          ['/assets/files/CV_20201019.pdf'],
+                        );
                       },
                       color: AppConfig.secondaryColor,
                       shape: RoundedRectangleBorder(
@@ -110,19 +104,20 @@ class _HeaderSectionState extends State<HeaderSection> {
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Icon(
                             Icons.file_download,
-                            color: Colors.white,
+                            color: AppConfig.textColor,
                           ),
                           SizedBox(width: SizeConfig.SMALL_SIZE),
                           Text(
-                            "Download Resume",
-                            style: TextStyle(color: Colors.white),
-                          )
+                            PageConfig.headerResumeDownload,
+                            style: StyleConfig.textStyleCta,
+                          ),
                         ],
                       ),
-                    ),
+                    ),*/
                   ],
                 ),
               ],

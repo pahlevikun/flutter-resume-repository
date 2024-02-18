@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pahlevikun.github.io/config/app_config.dart';
 import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/config/style_config.dart';
 import 'package:pahlevikun.github.io/di/injector.dart';
 import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
 import 'package:pahlevikun.github.io/presentation/widget/page_title.dart';
@@ -9,6 +10,7 @@ import 'package:pahlevikun.github.io/presentation/landing/section/contact/contac
 import 'package:pahlevikun.github.io/presentation/landing/section/contact/contact_presenter.dart';
 import 'package:pahlevikun.github.io/presentation/widget/responsive_widget.dart';
 import 'package:toastification/toastification.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactSection extends StatefulWidget {
   ContactSection(GlobalKey key) : super(key: key);
@@ -60,15 +62,46 @@ class _ContactSectionState extends State<ContactSection>
   }
 
   @override
-  void failedSentMail() {
+  void failedSentMail({
+    required String email,
+    required String subject,
+    required String name,
+    required String message,
+  }) {
     toastification.show(
       context: context,
       title: Text(
-          'Sorry, something went wrong, please send me a message manually :)'),
+        'Sorry, something went wrong, please send me a message manually :)',
+      ),
       type: ToastificationType.error,
-      autoCloseDuration: const Duration(seconds: 5),
+      autoCloseDuration: const Duration(seconds: 10),
     );
     toggleIsSubmitting(false);
+    sendEmailManually(
+      subject: subject,
+      name: name,
+      message: message,
+    );
+  }
+
+  Future<void> sendEmailManually({
+    required String subject,
+    required String name,
+    required String message,
+  }) async {
+    final Uri emailLaunchUri = Uri(
+      scheme: 'mailto',
+      path: "farhan.y.pahlevi@gmail.com",
+      query: {
+        'subject': subject,
+        'body': "Hello from $name, $message",
+      }
+          .entries
+          .map((e) =>
+              '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+          .join('&'),
+    );
+    launchUrl(emailLaunchUri, mode: LaunchMode.platformDefault);
   }
 
   @override
@@ -81,7 +114,6 @@ class _ContactSectionState extends State<ContactSection>
     return Form(
       key: _formKey,
       child: BasePage(
-        color: Colors.white,
         child: Padding(
           padding: SizeConfig.PAGE_CONTENT_PADDING,
           child: Column(
@@ -93,7 +125,7 @@ class _ContactSectionState extends State<ContactSection>
                 largeScreen: buildTabletLayout(),
                 mediumScreen: buildTabletLayout(),
                 smallScreen: buildPhoneLayout(),
-              )
+              ),
             ],
           ),
         ),
@@ -118,19 +150,37 @@ class _ContactSectionState extends State<ContactSection>
       maxLines: maxLines,
       decoration: InputDecoration(
         border: OutlineInputBorder(
+          borderSide: BorderSide(color: AppConfig.textColor, width: 1.0),
+          borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppConfig.textColor, width: 1.0),
+          borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppConfig.textColor, width: 1.0),
           borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
         ),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: AppConfig.secondaryColor, width: 1.0),
           borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
         ),
+        errorBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppConfig.secondaryColor, width: 1.0),
+          borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppConfig.secondaryColor, width: 1.0),
+          borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
+        ),
         hintText: hint,
+        hintStyle: StyleConfig.textStylePageInfoItem,
         contentPadding: EdgeInsets.symmetric(
           horizontal: 24,
           vertical: maxLines == 1 ? 0 : 12,
         ),
       ),
-      style: TextStyle(fontSize: 14),
+      style: StyleConfig.textStylePageInfoItem,
       cursorColor: AppConfig.secondaryColor,
       validator: (value) {
         if (value?.trim().isEmpty == true) {
@@ -160,19 +210,12 @@ class _ContactSectionState extends State<ContactSection>
           children: <Widget>[
             Text(
               title,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-              ),
+              style: StyleConfig.textStylePageBodyContent,
             ),
             SizedBox(height: 4),
             Text(
               content,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 14,
-                color: Colors.black54,
-              ),
+              style: StyleConfig.textStylePageInfoItem,
             ),
           ],
         )
@@ -182,15 +225,15 @@ class _ContactSectionState extends State<ContactSection>
 
   Widget buildSubmitButton() {
     return MaterialButton(
-      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
       onPressed: submit,
-      color: isSubmitting ? Colors.grey : AppConfig.secondaryColor,
+      color: isSubmitting ? AppConfig.textColor : AppConfig.secondaryColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(SizeConfig.LARGE_SIZE),
       ),
       child: Text(
         this.isSubmitting ? "Submitting..." : "Submit Message",
-        style: TextStyle(color: Colors.white),
+        style: StyleConfig.textStyleCta,
       ),
     );
   }
@@ -202,7 +245,12 @@ class _ContactSectionState extends State<ContactSection>
       final subject = _subjectController.text.trim();
       final message = _messageController.text.trim();
 
-      _presenter.sendMail(email, subject, name, message);
+      _presenter.sendMail(
+        email: email,
+        subject: subject,
+        name: name,
+        message: message,
+      );
     }
   }
 

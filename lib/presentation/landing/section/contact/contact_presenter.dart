@@ -10,7 +10,12 @@ class ContactPresenter {
 
   ContactPresenter({required this.view});
 
-  void sendMail(String email, subject, name, message) {
+  void sendMail({
+    required String email,
+    required String subject,
+    required String name,
+    required String message,
+  }) {
     Single.fromCallable(() => view.showLoading()).flatMap((value) {
       final param = Email(
         email: email,
@@ -24,7 +29,12 @@ class ContactPresenter {
         view.successSentMail();
       },
       onError: (error) {
-        view.failedSentMail();
+        view.failedSentMail(
+          email: email,
+          subject: subject,
+          name: name,
+          message: message,
+        );
       },
     );
   }

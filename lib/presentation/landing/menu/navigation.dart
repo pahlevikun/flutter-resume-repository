@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pahlevikun.github.io/config/app_config.dart';
 import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/config/style_config.dart';
 import 'package:pahlevikun.github.io/di/injector.dart';
 import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
 import 'package:pahlevikun.github.io/presentation/view/menu_button.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class Navigation extends StatelessWidget {
@@ -28,19 +28,20 @@ class Navigation extends StatelessWidget {
       onTap: onTap,
       child: Padding(
         padding: const EdgeInsets.only(
-            top: SizeConfig.TINY_LARGE_SIZE,
-            bottom: SizeConfig.TINY_LARGE_SIZE),
+          top: SizeConfig.TINY_LARGE_SIZE,
+          bottom: SizeConfig.TINY_LARGE_SIZE,
+        ),
         child: Row(
           children: <Widget>[
             Icon(
               icon,
-              color: Colors.white,
+              color: AppConfig.textColor,
               size: SizeConfig.MEDIUM_LARGE_SIZE,
             ),
             SizedBox(width: SizeConfig.SMALL_LARGE_SIZE),
             Text(
               title,
-              style: TextStyle(color: Colors.white),
+              style: StyleConfig.textStyleCta,
             )
           ],
         ),
@@ -61,7 +62,7 @@ class Navigation extends StatelessWidget {
         backgroundColor: AppConfig.secondaryColor,
         child: Icon(
           iconData,
-          color: Colors.white,
+          color: AppConfig.textColor,
           size: SizeConfig.MEDIUM_SIZE,
         ),
       ),
@@ -73,7 +74,8 @@ class Navigation extends StatelessWidget {
       color: AppConfig.primaryColor,
       elevation: SizeConfig.SMALL_LARGE_SIZE,
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(SizeConfig.SMALL_LARGE_SIZE)),
+        borderRadius: BorderRadius.circular(SizeConfig.SMALL_LARGE_SIZE),
+      ),
       child: Padding(
         padding: EdgeInsets.all(SizeConfig.LARGE_SIZE),
         child: SingleChildScrollView(
@@ -81,12 +83,19 @@ class Navigation extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              SizedBox(
-                width: 96,
-                height: 96,
+              Container(
+                width: 120,
+                height: 120,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: AppConfig.secondaryColor,
+                    width: SizeConfig.TINY_LARGE_SIZE,
+                  ),
+                ),
                 child: CircleAvatar(
                   backgroundImage: AssetImage(_useCase.execute({}).avatar),
-                  backgroundColor: Colors.white,
+                  backgroundColor: AppConfig.textColor,
                 ),
               ),
               SizedBox(height: SizeConfig.LARGE_SMALL_SIZE),
@@ -96,7 +105,7 @@ class Navigation extends StatelessWidget {
                     TextSpan(
                       text: _useCase.execute({}).name,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppConfig.textColor,
                         fontWeight: FontWeight.bold,
                         fontSize: SizeConfig.LARGE_SMALL_SIZE,
                       ),
@@ -108,7 +117,7 @@ class Navigation extends StatelessWidget {
               Text(
                 _useCase.execute({}).job,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: AppConfig.textColor,
                   fontWeight: FontWeight.w200,
                   fontSize: SizeConfig.MEDIUM_SMALL_SIZE,
                 ),
@@ -129,15 +138,15 @@ class Navigation extends StatelessWidget {
                 },
               ),
               _buildNavigationOption(
-                title: "Expertise",
-                icon: FontAwesomeIcons.key,
+                title: "Blog",
+                icon: Icons.style,
                 onTap: () {
                   this.onTap(2);
                 },
               ),
               _buildNavigationOption(
-                title: "Skills",
-                icon: Icons.book,
+                title: "Expertise",
+                icon: FontAwesomeIcons.key,
                 onTap: () {
                   this.onTap(3);
                 },
@@ -150,45 +159,38 @@ class Navigation extends StatelessWidget {
                 },
               ),
               _buildNavigationOption(
-                title: "Portfolio",
-                icon: Icons.extension,
-                onTap: () {
-                  this.onTap(5);
-                },
-              ),
-              _buildNavigationOption(
                 title: "Education",
                 icon: Icons.subject,
                 onTap: () {
-                  this.onTap(6);
-                },
-              ),
-              _buildNavigationOption(
-                title: "Certificate",
-                icon: Icons.vignette,
-                onTap: () {
-                  this.onTap(7);
+                  this.onTap(5);
                 },
               ),
               _buildNavigationOption(
                 title: "Activity & Volunteering",
                 icon: FontAwesomeIcons.football,
                 onTap: () {
-                  this.onTap(8);
+                  this.onTap(6);
                 },
               ),
               _buildNavigationOption(
-                title: "Blog",
-                icon: Icons.style,
+                title: "Portfolio",
+                icon: Icons.extension,
                 onTap: () {
-                  this.onTap(9);
+                  this.onTap(7);
+                },
+              ),
+              _buildNavigationOption(
+                title: "Award, Certificate & Honor",
+                icon: Icons.vignette,
+                onTap: () {
+                  this.onTap(8);
                 },
               ),
               _buildNavigationOption(
                 title: "Contact",
                 icon: Icons.contacts,
                 onTap: () {
-                  this.onTap(10);
+                  this.onTap(9);
                 },
               ),
               SizedBox(height: SizeConfig.LARGE_MEDIUM_SIZE),
@@ -223,7 +225,7 @@ class Navigation extends StatelessWidget {
                 child: Text(
                   _useCase.execute({}).email,
                   style: TextStyle(
-                    color: Colors.white.withOpacity(.5),
+                    color: AppConfig.textColor.withOpacity(.5),
                     fontWeight: FontWeight.w100,
                     fontStyle: FontStyle.italic,
                     fontSize: SizeConfig.SMALL_LARGE_SIZE,

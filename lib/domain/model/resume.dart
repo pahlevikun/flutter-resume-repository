@@ -29,9 +29,6 @@ class ResumeModel {
   final Map<String, String> aboutInfo;
 
   final List<Expertise> expertise;
-  final List<Skill> technicalSkill;
-  final List<Skill> industrySkill;
-  final String introSkill;
 
   final List<Experience> experience;
   final List<Volunteer> volunteer;
@@ -57,9 +54,6 @@ class ResumeModel {
     required this.about,
     required this.aboutInfo,
     required this.expertise,
-    required this.technicalSkill,
-    required this.industrySkill,
-    required this.introSkill,
     required this.experience,
     required this.volunteer,
     required this.education,

@@ -3,8 +3,6 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:pahlevikun.github.io/config/app_config.dart';
 import 'package:pahlevikun.github.io/config/size_config.dart';
-import 'package:pahlevikun.github.io/di/injector.dart';
-import 'package:pahlevikun.github.io/domain/usecase/get_resume_data_usecase.dart';
 import 'package:pahlevikun.github.io/presentation//landing/section/header_section.dart';
 import 'package:pahlevikun.github.io/presentation/landing/menu/app_bar_mobile.dart';
 import 'package:pahlevikun.github.io/presentation/landing/menu/navigation.dart';
@@ -16,8 +14,8 @@ import 'package:pahlevikun.github.io/presentation/landing/section/education_sect
 import 'package:pahlevikun.github.io/presentation/landing/section/experience_section.dart';
 import 'package:pahlevikun.github.io/presentation/landing/section/expertise_section.dart';
 import 'package:pahlevikun.github.io/presentation/landing/section/portofolio_section.dart';
-import 'package:pahlevikun.github.io/presentation/landing/section/skill_section.dart';
 import 'package:pahlevikun.github.io/presentation/landing/section/volunteer_section.dart';
+import 'package:pahlevikun.github.io/presentation/view/hideable_glow_behavior.dart';
 
 class LandingPage extends StatefulWidget {
   @override
@@ -38,13 +36,12 @@ class _LandingPageState extends State<LandingPage> {
     GlobalKey(),
     GlobalKey(),
     GlobalKey(),
-    GlobalKey(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
-      builder: (_, constrain) {
+      builder: (context, constrain) {
         return constrain.maxWidth >= AppConfig.MIN_TABLET_SIZE
             ? _buildTabletBody()
             : _buildPhoneBody();
@@ -53,7 +50,7 @@ class _LandingPageState extends State<LandingPage> {
   }
 
   void _hireMe() {
-    scrollToIndex(10);
+    scrollToIndex(9);
   }
 
   Widget _homePage() {
@@ -78,37 +75,38 @@ class _LandingPageState extends State<LandingPage> {
   Widget _addPadding() => const SizedBox(height: SizeConfig.MEDIUM_SIZE);
 
   Widget _buildListDetail(bool forTablet) {
-    return SingleChildScrollView(
-      padding: EdgeInsets.symmetric(vertical: SizeConfig.LARGE_SIZE),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Visibility(
-            visible: !forTablet,
-            child: AppBarMobile(),
-          ),
-          _homePage(),
-          _addPadding(),
-          AboutSection(keys[1], _hireMe),
-          _addPadding(),
-          ExpertiseSection(keys[2]),
-          _addPadding(),
-          SkillSection(keys[3]),
-          _addPadding(),
-          ExperienceSection(keys[4]),
-          _addPadding(),
-          PortfolioSection(keys[5]),
-          _addPadding(),
-          EducationSection(keys[6]),
-          _addPadding(),
-          AwardsSection(keys[7]),
-          _addPadding(),
-          VolunteerSection(keys[8]),
-          _addPadding(),
-          BlogSection(keys[9]),
-          _addPadding(),
-          ContactSection(keys[10])
-        ],
+    return ScrollConfiguration(
+      behavior: HideableGlowBehavior().copyWith(scrollbars: false),
+      child: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(vertical: SizeConfig.LARGE_SIZE),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Visibility(
+              visible: !forTablet,
+              child: AppBarMobile(),
+            ),
+            _homePage(),
+            _addPadding(),
+            AboutSection(keys[1], _hireMe),
+            _addPadding(),
+            BlogSection(keys[2]),
+            _addPadding(),
+            ExpertiseSection(keys[3]),
+            _addPadding(),
+            ExperienceSection(keys[4]),
+            _addPadding(),
+            EducationSection(keys[5]),
+            _addPadding(),
+            VolunteerSection(keys[6]),
+            _addPadding(),
+            PortfolioSection(keys[7]),
+            _addPadding(),
+            AwardsSection(keys[8]),
+            _addPadding(),
+            ContactSection(keys[9])
+          ],
+        ),
       ),
     );
   }
@@ -137,6 +135,7 @@ class _LandingPageState extends State<LandingPage> {
   Widget _buildTabletBody() {
     return Scaffold(
       key: _scaffoldKey,
+      backgroundColor: AppConfig.backgroundColor,
       body: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -145,7 +144,7 @@ class _LandingPageState extends State<LandingPage> {
           _buildNavigation(true),
           SizedBox(width: 24),
           LimitedBox(
-            maxWidth: 720,
+            maxWidth: 800,
             child: _buildListDetail(true),
           )
         ],
@@ -156,6 +155,7 @@ class _LandingPageState extends State<LandingPage> {
   Widget _buildPhoneBody() {
     return Scaffold(
       key: _scaffoldKey,
+      backgroundColor: AppConfig.backgroundColor,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 12),
         child: _buildListDetail(false),

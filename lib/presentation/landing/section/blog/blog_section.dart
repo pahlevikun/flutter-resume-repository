@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pahlevikun.github.io/config/app_config.dart';
+import 'package:pahlevikun.github.io/config/page_config.dart';
 import 'package:pahlevikun.github.io/config/size_config.dart';
+import 'package:pahlevikun.github.io/config/style_config.dart';
 import 'package:pahlevikun.github.io/domain/model/story.dart';
 import 'package:pahlevikun.github.io/presentation/view/react_button.dart';
 import 'package:pahlevikun.github.io/presentation/widget/page_title.dart';
@@ -53,7 +56,6 @@ class _BlogSectionState extends State<BlogSection> implements BlogContract {
 
   Widget build(BuildContext context) {
     return BasePage(
-      color: Colors.white,
       child: _buildBody(),
     );
   }
@@ -73,11 +75,11 @@ class _BlogSectionState extends State<BlogSection> implements BlogContract {
                 right: SizeConfig.HORIZONTAL_PADDING_SIZE,
                 top: SizeConfig.VERTICAL_PADDING_SIZE,
               ),
-              child: PageTitle("Blog"),
+              child: PageTitle(PageConfig.blogTitle),
             ),
-            SizedBox(height: SizeConfig.LARGE_SIZE),
+            const SizedBox(height: SizeConfig.LARGE_SIZE),
             _buildBlog(),
-            SizedBox(height: SizeConfig.LARGE_SIZE),
+            const SizedBox(height: SizeConfig.LARGE_SIZE),
           ],
         );
       case BlogState.ERROR:
@@ -112,68 +114,75 @@ Widget _buildBlogItems(Story story) {
     mainAxisAlignment: MainAxisAlignment.start,
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
-      Container(
-        width: 200,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            SizedBox(
-              height: 164,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
-                child: AspectRatio(
-                  aspectRatio: 5 / 4,
-                  child: Stack(
-                    children: <Widget>[
-                      ReactButton(
-                        onTap: () => _openLink(story.link),
-                        child: Container(
-                          alignment: Alignment.center,
-                          color: Colors.grey.withAlpha(24),
-                          child: Image.network(
-                            story.thumbnail,
-                            fit: BoxFit.cover,
-                            height: double.infinity,
-                            width: double.infinity,
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        top: SizeConfig.SMALL_SIZE,
-                        left: SizeConfig.SMALL_SIZE,
-                        child: Container(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 2,
-                            horizontal: SizeConfig.SMALL_LARGE_SIZE,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.redAccent,
-                            borderRadius:
-                                BorderRadius.circular(SizeConfig.LARGE_SIZE),
-                          ),
-                          child: Text(
-                            DateTimeUtils.dateTimeYear(story.pubDate),
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: SizeConfig.BODY_1_FONT_SIZE,
+      ClipRRect(
+        borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
+        child: Container(
+          padding: EdgeInsets.all(SizeConfig.MEDIUM_SIZE),
+          color: AppConfig.backgroundNestedCard.withAlpha(75),
+          child: Container(
+            width: 200,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(
+                  height: 164,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SMALL_SIZE),
+                    child: AspectRatio(
+                      aspectRatio: 5 / 4,
+                      child: Stack(
+                        children: <Widget>[
+                          ReactButton(
+                            onTap: () => _openLink(story.link),
+                            child: Container(
+                              alignment: Alignment.center,
+                              color: Colors.grey.withAlpha(24),
+                              child: Image.network(
+                                story.thumbnail,
+                                fit: BoxFit.cover,
+                                height: double.infinity,
+                                width: double.infinity,
+                              ),
                             ),
                           ),
-                        ),
+                          Positioned(
+                            top: SizeConfig.SMALL_SIZE,
+                            left: SizeConfig.SMALL_SIZE,
+                            child: Container(
+                              padding: EdgeInsets.symmetric(
+                                vertical: 2,
+                                horizontal: SizeConfig.SMALL_LARGE_SIZE,
+                              ),
+                              decoration: BoxDecoration(
+                                color: AppConfig.secondaryColor,
+                                borderRadius: BorderRadius.circular(
+                                  SizeConfig.LARGE_SIZE,
+                                ),
+                              ),
+                              child: Text(
+                                DateTimeUtils.dateTimeYear(story.pubDate),
+                                style: StyleConfig.textStylePageInfoItem.copyWith(
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
+                SizedBox(height: SizeConfig.SMALL_LARGE_SIZE),
+                Text(
+                  story.title,
+                  maxLines: 3,
+                  textAlign: TextAlign.center,
+                  style: StyleConfig.textStylePageInfoItem,
+                )
+              ],
             ),
-            SizedBox(height: SizeConfig.SMALL_LARGE_SIZE),
-            Text(
-              story.title,
-              maxLines: 3,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: SizeConfig.BODY_3_FONT_SIZE),
-            )
-          ],
+          ),
         ),
       ),
       SizedBox(width: SizeConfig.LARGE_SIZE)

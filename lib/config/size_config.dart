@@ -1,17 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 class SizeConfig {
-  static MediaQueryData? _mediaQueryData;
-  static double? screenWidth;
-  static double? screenHeight;
-  static double? blockSizeHorizontal;
-  static double? blockSizeVertical;
-
-  static double? _safeAreaHorizontal;
-  static double? _safeAreaVertical;
-  static double? safeBlockHorizontal;
-  static double? safeBlockVertical;
-
+  static const double VERY_TINY_SIZE = 2;
   static const double TINY_SIZE = 4;
   static const double TINY_LARGE_SIZE = 6;
   static const double SMALL_SIZE = 8;
@@ -44,33 +34,4 @@ class SizeConfig {
   static const double BODY_2_FONT_SIZE = 14;
   static const double BODY_3_FONT_SIZE = 16;
 
-  SizeConfig? init(BuildContext context) {
-    _mediaQueryData = MediaQuery.of(context);
-    screenWidth = _mediaQueryData!.size.width;
-    screenHeight = _mediaQueryData!.size.height;
-    blockSizeHorizontal = screenWidth! / 100;
-    blockSizeVertical = screenHeight! / 100;
-
-    _safeAreaHorizontal =
-        _mediaQueryData!.padding.left + _mediaQueryData!.padding.right;
-    _safeAreaVertical =
-        _mediaQueryData!.padding.top + _mediaQueryData!.padding.bottom;
-    safeBlockHorizontal = (screenWidth! - _safeAreaHorizontal!) / 100;
-    safeBlockVertical = (screenHeight! - _safeAreaVertical!) / 100;
-    return SizeConfig();
-  }
-
-  double getFont(int block) {
-    return safeBlockHorizontal! * block;
-  }
-
-  double getHorizontal(int block) {
-    return safeBlockHorizontal! * block;
-  }
-
-  double getVertical(int block) {
-    return safeBlockVertical! * block;
-  }
-
-  double? getScreenHeight() => screenHeight;
 }

@@ -19,19 +19,26 @@ class AppBarMobile extends StatelessWidget {
             IconButton(
               icon: Icon(
                 Icons.menu,
-                color: Colors.white,
+                color: AppConfig.textColor,
               ),
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
             ),
             SizedBox(width: SizeConfig.MEDIUM_SIZE),
-            SizedBox(
+            Container(
               width: SizeConfig.LARGE_SIZE,
               height: SizeConfig.LARGE_SIZE,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: AppConfig.secondaryColor,
+                  width: SizeConfig.VERY_TINY_SIZE,
+                ),
+              ),
               child: CircleAvatar(
                 backgroundImage: AssetImage(_useCase.execute({}).avatar),
-                backgroundColor: Colors.white,
+                backgroundColor: AppConfig.textColor,
               ),
             ),
             SizedBox(width: SizeConfig.MEDIUM_SIZE),
@@ -41,7 +48,7 @@ class AppBarMobile extends StatelessWidget {
                   TextSpan(
                     text: _useCase.execute({}).name,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: AppConfig.textColor,
                       fontWeight: FontWeight.bold,
                       fontSize: SizeConfig.MEDIUM_EXTRA_LARGE_SIZE,
                     ),

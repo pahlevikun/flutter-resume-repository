@@ -1,19 +1,24 @@
-import 'package:flutter/widgets.dart';
 
 class Experience {
   final String title;
-  final String company;
+  final String? company;
   final String duration;
   final String image;
   final String description;
-  final List<Experience>? nested;
-
+  final String employmentStatus;
+  final List<String>? responsibility;
+  final List<String>? workResult;
   Experience({
     required this.title,
-    required this.company,
     required this.duration,
     required this.image,
     required this.description,
+    required this.employmentStatus,
+    this.company,
+    this.responsibility,
+    this.workResult,
     this.nested,
   });
+
+  final List<Experience>? nested;
 }

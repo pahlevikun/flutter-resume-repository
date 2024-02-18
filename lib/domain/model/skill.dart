@@ -1,11 +1,11 @@
 class Skill {
   final String name;
   final int percent;
-  final int yearOfExperience;
+  final int yearOfStartingThisExperience;
 
   Skill({
     required this.name,
     required this.percent,
-    required this.yearOfExperience,
+    required this.yearOfStartingThisExperience,
   });
 }

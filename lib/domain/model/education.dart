@@ -6,6 +6,7 @@ class Education {
   final String year;
   final String institution;
   final String description;
+  final String image;
 
   Education({
     required this.title,
@@ -13,5 +14,6 @@ class Education {
     required this.year,
     required this.institution,
     required this.description,
+    required this.image,
   });
 }

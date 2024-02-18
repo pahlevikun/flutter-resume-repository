@@ -69,6 +69,8 @@ class StoryResponse {
   final String? thumbnail;
   @JsonKey(name: "description")
   final String? description;
+  @JsonKey(name: "content")
+  final String? content;
   @JsonKey(name: "categories")
   final List<String>? categories;
 
@@ -80,6 +82,7 @@ class StoryResponse {
     this.author,
     this.thumbnail,
     this.description,
+    this.content,
     this.categories,
   });
 
