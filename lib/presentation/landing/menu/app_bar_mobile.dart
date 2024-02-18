@@ -60,6 +60,5 @@ class AppBarMobile extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

@@ -11,5 +11,6 @@ class AppConfig {
   static final Color backgroundNestedCard = HexColor("bfbdb7");
   static final Color textColor = HexColor("f7f7f7");
 
-  static const MIN_TABLET_SIZE = 1200;
+  static const MIN_TABLET_SIZE = 1100;
+  static const MAX_MOBILE_SIZE = 480;
 }

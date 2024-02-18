@@ -10,9 +10,13 @@ import 'package:url_launcher/url_launcher_string.dart';
 
 class Navigation extends StatelessWidget {
   final Function onTap;
+  final bool isPhone;
   final _useCase = Injector.locator<GetResumeDataUseCase>();
 
-  Navigation({required this.onTap});
+  Navigation({
+    this.isPhone = false,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -172,20 +176,22 @@ class Navigation extends StatelessWidget {
                   this.onTap(6);
                 },
               ),
-              _buildNavigationOption(
-                title: "Portfolio",
-                icon: Icons.extension,
-                onTap: () {
-                  this.onTap(7);
-                },
-              ),
-              _buildNavigationOption(
-                title: "Award, Certificate & Honor",
-                icon: Icons.vignette,
-                onTap: () {
-                  this.onTap(8);
-                },
-              ),
+              if (!isPhone)
+                _buildNavigationOption(
+                  title: "Portfolio",
+                  icon: Icons.extension,
+                  onTap: () {
+                    this.onTap(7);
+                  },
+                ),
+              if (!isPhone)
+                _buildNavigationOption(
+                  title: "Award, Certificate & Honor",
+                  icon: Icons.vignette,
+                  onTap: () {
+                    this.onTap(8);
+                  },
+                ),
               _buildNavigationOption(
                 title: "Contact",
                 icon: Icons.contacts,

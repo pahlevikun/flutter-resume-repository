@@ -42,9 +42,12 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constrain) {
+        print("width >>> ${constrain.maxWidth}");
         return constrain.maxWidth >= AppConfig.MIN_TABLET_SIZE
-            ? _buildTabletBody()
-            : _buildPhoneBody();
+            ? _buildWebBrowserBody()
+            : _buildTabletAndPhoneBody(
+                isPhone: constrain.maxWidth <= 500,
+              );
       },
     );
   }
@@ -74,7 +77,7 @@ class _LandingPageState extends State<LandingPage> {
 
   Widget _addPadding() => const SizedBox(height: SizeConfig.MEDIUM_SIZE);
 
-  Widget _buildListDetail(bool forTablet) {
+  Widget _buildListDetail(bool forTablet, bool isSmartPhone) {
     return ScrollConfiguration(
       behavior: HideableGlowBehavior().copyWith(scrollbars: false),
       child: SingleChildScrollView(
@@ -100,10 +103,10 @@ class _LandingPageState extends State<LandingPage> {
             _addPadding(),
             VolunteerSection(keys[6]),
             _addPadding(),
-            PortfolioSection(keys[7]),
-            _addPadding(),
-            AwardsSection(keys[8]),
-            _addPadding(),
+            if (!isSmartPhone) PortfolioSection(keys[7]),
+            if (!isSmartPhone) _addPadding(),
+            if (!isSmartPhone) AwardsSection(keys[8]),
+            if (!isSmartPhone) _addPadding(),
             ContactSection(keys[9])
           ],
         ),
@@ -121,10 +124,11 @@ class _LandingPageState extends State<LandingPage> {
     }
   }
 
-  Widget _buildNavigation(bool forTablet) {
+  Widget _buildNavigation(bool forTablet, bool isPhone) {
     return Padding(
       padding: EdgeInsets.only(top: forTablet ? SizeConfig.LARGE_SIZE : 0),
       child: Navigation(
+        isPhone: isPhone,
         onTap: (index) {
           scrollToIndex(index);
         },
@@ -132,7 +136,7 @@ class _LandingPageState extends State<LandingPage> {
     );
   }
 
-  Widget _buildTabletBody() {
+  Widget _buildWebBrowserBody() {
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: AppConfig.backgroundColor,
@@ -141,31 +145,43 @@ class _LandingPageState extends State<LandingPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          _buildNavigation(true),
+          _buildNavigation(true, false),
           SizedBox(width: 24),
           LimitedBox(
             maxWidth: 800,
-            child: _buildListDetail(true),
+            child: _buildListDetail(true, false),
           )
         ],
       ),
     );
   }
 
-  Widget _buildPhoneBody() {
+  Widget _buildTabletAndPhoneBody({required bool isPhone}) {
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: AppConfig.backgroundColor,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 12),
-        child: _buildListDetail(false),
+        child: _buildListDetail(false, isPhone),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: AppConfig.secondaryColor,
+        tooltip: 'Back to Top',
+        onPressed: () {
+          scrollToIndex(0);
+        },
+        child: Icon(
+          Icons.arrow_upward_rounded,
+          color: AppConfig.textColor,
+          size: SizeConfig.LARGE_SIZE,
+        ),
       ),
       drawer: Theme(
         data: Theme.of(context).copyWith(
           canvasColor: Colors.transparent,
         ),
         child: Drawer(
-          child: _buildNavigation(false),
+          child: _buildNavigation(false, isPhone),
         ),
       ),
     );

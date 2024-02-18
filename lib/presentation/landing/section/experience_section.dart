@@ -22,6 +22,7 @@ class ExperienceSection extends StatefulWidget {
 
 class _ExperienceSectionState extends State<ExperienceSection> {
   final double _imageSize = 100;
+  final double _mobileImageSize = 70;
   final _useCase = Injector.locator<GetResumeDataUseCase>();
   late List<Experience> _data = _useCase.execute({}).experience;
 
@@ -74,6 +75,117 @@ class _ExperienceSectionState extends State<ExperienceSection> {
   }
 
   Widget _buildCompanyDetail(Experience data) {
+    return LayoutBuilder(
+      builder: (context, constrain) {
+        return constrain.maxWidth <= AppConfig.MAX_MOBILE_SIZE
+            ? _buildCompanyDetailMobile(data)
+            : _buildCompanyDetailTabletAndWeb(data);
+      },
+    );
+  }
+
+  ClipRRect _buildCompanyDetailMobile(Experience data) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
+      child: Container(
+        color: AppConfig.backgroundNestedCard.withAlpha(70),
+        padding: const EdgeInsets.only(
+          top: SizeConfig.MEDIUM_SIZE,
+          bottom: SizeConfig.SMALL_SIZE,
+          left: SizeConfig.MEDIUM_SIZE,
+          right: SizeConfig.MEDIUM_SIZE,
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              width: _mobileImageSize,
+              height: _mobileImageSize,
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(SizeConfig.SMALL_SIZE),
+                color: AppConfig.textColor,
+                border: Border.all(
+                  color: AppConfig.secondaryColor,
+                  width: SizeConfig.TINY_SIZE,
+                ),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(SizeConfig.TINY_SIZE),
+                child: AspectRatio(
+                  aspectRatio: 1 / 1,
+                  child: Image(
+                    image: AssetImage(data.image),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: SizeConfig.SMALL_SIZE,
+              width: double.infinity,
+            ),
+            Text(
+              data.title,
+              style: StyleConfig.textStylePageBodyTitle.copyWith(
+                fontWeight: FontWeight.bold,
+                fontSize:
+                data.duration.isNotEmpty == true ? 15 : 17,
+              ),
+            ),
+            if (data.company != null)
+              Text(
+                data.company!,
+                style: StyleConfig.textStylePageBodyTitle.copyWith(
+                  fontSize: 14,
+                ),
+              ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: data.company == null
+                    ? SizeConfig.MEDIUM_SIZE
+                    : SizeConfig.TINY_SIZE,
+              ),
+              child: Text(
+                data.employmentStatus,
+                style: StyleConfig.textStylePageBodyTitle.copyWith(
+                  fontSize:
+                  data.nested?.isNotEmpty == true ? 13 : 12,
+                ),
+              ),
+            ),
+            Text(
+              data.duration,
+              style: StyleConfig.textStylePageBodyTitle.copyWith(
+                fontSize: data.nested?.isNotEmpty == true ? 13 : 12,
+              ),
+            ),
+            const SizedBox(
+              height: SizeConfig.MEDIUM_SIZE,
+            ),
+            if (data.nested?.isNotEmpty == true)
+              Column(
+                children: data.nested
+                        ?.mapIndexed(
+                          (index, element) => Container(
+                            padding: EdgeInsets.only(
+                              top: SizeConfig.MEDIUM_SIZE,
+                              bottom: SizeConfig.SMALL_SIZE,
+                            ),
+                            child: _buildCompanyDetailMobile(element),
+                          ),
+                        )
+                        .toList() ??
+                    [],
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  ClipRRect _buildCompanyDetailTabletAndWeb(Experience data) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(SizeConfig.MEDIUM_SIZE),
       child: Container(
@@ -194,7 +306,7 @@ class _ExperienceSectionState extends State<ExperienceSection> {
                               top: SizeConfig.MEDIUM_SIZE,
                               bottom: SizeConfig.SMALL_SIZE,
                             ),
-                            child: _buildCompanyDetail(element),
+                            child: _buildCompanyDetailTabletAndWeb(element),
                           ),
                         )
                         .toList() ??

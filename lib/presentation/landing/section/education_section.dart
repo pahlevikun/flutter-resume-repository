@@ -23,6 +23,7 @@ class _EducationSectionState extends State<EducationSection> {
   final _useCase = Injector.locator<GetResumeDataUseCase>();
   late List<Education> _data = _useCase.execute({}).education;
   final double _imageSize = 100;
+  final double _mobileImageSize = 70;
 
   @override
   Widget build(BuildContext context) {
@@ -84,6 +85,85 @@ class _EducationSectionState extends State<EducationSection> {
   }
 
   Widget _buildEducationDetail(Education data) {
+    return LayoutBuilder(
+      builder: (context, constrain) {
+        return constrain.maxWidth <= AppConfig.MAX_MOBILE_SIZE
+            ? _buildEducationDetailMobile(data)
+            : _buildEducationDetailTabletAndWeb(data);
+      },
+    );
+  }
+
+  Widget _buildEducationDetailMobile(Education data) {
+    return Column(
+      mainAxisSize: MainAxisSize.max,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Container(
+          width: _mobileImageSize,
+          height: _mobileImageSize,
+          decoration: BoxDecoration(
+            shape: BoxShape.rectangle,
+            borderRadius: BorderRadius.circular(SizeConfig.SMALL_SIZE),
+            color: AppConfig.textColor,
+            border: Border.all(
+              color: AppConfig.secondaryColor,
+              width: SizeConfig.TINY_SIZE,
+            ),
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(SizeConfig.TINY_SIZE),
+            child: AspectRatio(
+              aspectRatio: 1 / 1,
+              child: Image(
+                image: AssetImage(data.image),
+                fit: BoxFit.fill,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: SizeConfig.SMALL_SIZE,
+          width: double.infinity,
+        ),
+        Text(
+          data.title,
+          style: StyleConfig.textStylePageBodyTitle.copyWith(
+            fontWeight: FontWeight.bold,
+            fontSize: 17,
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            top: SizeConfig.SMALL_SIZE,
+          ),
+          child: Text(
+            data.field,
+            style: StyleConfig.textStylePageBodyTitle.copyWith(
+              fontSize: 15,
+            ),
+          ),
+        ),
+        Text(
+          data.institution,
+          style: StyleConfig.textStylePageBodyTitle.copyWith(
+            fontSize: 12,
+          ),
+        ),
+        Text(
+          data.year,
+          style: StyleConfig.textStylePageBodyTitle.copyWith(
+            fontSize: 12,
+          ),
+        ),
+        const SizedBox(
+          height: SizeConfig.MEDIUM_SIZE,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildEducationDetailTabletAndWeb(Education data) {
     return Column(
       mainAxisSize: MainAxisSize.max,
       crossAxisAlignment: CrossAxisAlignment.start,
